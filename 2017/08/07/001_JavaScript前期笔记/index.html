@@ -1,0 +1,1720 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>001_javascript前期笔记 | Jiang</title>
+  <meta name="author" content="Jiang" />
+
+  
+  <meta name="description" content="Javascript####★技巧★   鼠标移入手势
+CSS中加入：
+cursor: pointer;
+
+####★技巧★
+push 删除空格  
+ if(arr[i]!=undefined){}
+
+####★技巧★
+数据类型  小写   number   
+
+Hbuilder  改主题颜色
+工具" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="001_javascript前期笔记" />
+  <meta property="og:site_name" content="Jiang" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Jiang" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Jiang</a></h1>
+  <h2><a href="/">I am a computer programmer</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-08-07T15:21:55.810Z"><a href="/2017/08/07/001_JavaScript前期笔记/">001_javascript前期笔记</a></time>
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h2><pre><code class="bash"><span class="comment">####★技巧★   鼠标移入手势</span>
+CSS中加入：
+cursor: pointer;
+
+<span class="comment">####★技巧★</span>
+push 删除空格  
+ <span class="keyword">if</span>(arr[i]!=undefined){}
+
+<span class="comment">####★技巧★</span>
+数据类型  小写   number   
+
+Hbuilder  改主题颜色
+工具--视觉主题设置--夜间模式
+
+<span class="comment">####★技巧★</span>
+不同的script之间是有联系的
+
+<span class="comment">####★技巧★</span>
+可以引入其他格式文件
+* `&lt;script src=<span class="string">"笔记.txt"</span>&gt;&lt;/script&gt;`
+
+<span class="comment">####★技巧★</span>
+给数据加引号‘’  双引号“”  ，选中加引号
+
+<span class="comment">####★技巧★</span>
+var min=[];   //数组需要设置  =[]  ，否则为undefined
+&gt; 数组的下标从0开始
+
+<span class="comment">#### ★技巧★</span>
+    弹框中输入数据
+    var score=prompt(<span class="string">'请输入您的分数'</span>,<span class="string">''</span>);
+*    prompt(<span class="string">'输入月份'</span>,<span class="string">''</span>);  //输入的都是字符型 &lt;br&gt;
+    document.write(<span class="string">'&lt;b'</span> <span class="string">'r&gt;'</span>); //换行  
+
+<span class="comment">#### ★技巧★</span>
+    location.reload();//自动刷新页面   
+
+<span class="comment">#### ★技巧★</span>
+    html 标签中的叫属性，CSS里的设置叫样式
+
+
+
+<span class="comment">#★★★★★★★★20170418★★★★★★★★★</span>
+
+<span class="comment">## JavaScript:        简称:JS</span>
+
+* ★组成★
+1.ECMAScript
+    + 基础语法   变量   数据类型   运算符   结构   函数   对象   
+2.BOM（browser object module）   浏览器对象模型
+    + window 子对象  导航
+3.DOM（document object module）   文档对象模型
+    + html元素 属性 方法 样式 
+
+
+
+<span class="comment">## ★语法特点★</span>
+* 1.基于对象-和-事件驱动-的-松散型-的-解释性语言****
+&gt;    松散型:    数据类型  var a=1；
+             句末是否加“；”分号
+》    解释性：浏览器来解析
+* 2.弱类型语言. 
+* 3.XHtml
+
+
+
+<span class="comment">##引入方式</span>
+    * script 标签对
+    * 外部js文件
+    * 重定向
+    * 超链接
+
+&gt;外部js文件中不能出现js标签对，script标签对中不能出现js代码：
+    &lt;a href=<span class="string">"javascript:;"</span>&gt;链接&lt;/a&gt;    //a标签不会刷新
+
+
+* 1.--在域名或重定向当中调用-&lt;br&gt;
+    `&lt;a href=<span class="string">"javascript:alert(1)"</span>&gt;链接&lt;/a&gt;
+    &lt;form action=<span class="string">"javascript:alert(2)"</span>&gt;
+        &lt;input <span class="built_in">type</span>=<span class="string">"submit"</span> name=<span class="string">""</span> id=<span class="string">""</span> value=<span class="string">""</span> /&gt;
+    &lt;/form&gt;`
+* 2.--在事件的后面调用--&gt;
+    `&lt;div onclick=<span class="string">"alert(3)"</span>&gt;&lt;/div&gt;`
+* 3.--嵌入样式--&gt;
+    `&lt;script&gt;
+        alert(4);
+    &lt;/script&gt;`
+* 4.--引入样式--&gt;
+    `&lt;script src=<span class="string">"js/demo1.js"</span>&gt;&lt;/script&gt;`
+
+
+<span class="comment">## 调试工具</span>
+    1. alert(1)  警示框
+    2. document.write(<span class="string">"123"</span>);    页面输出
+    3. console.log(<span class="string">"uek"</span>);      /*输出到控制台*/
+    4. console.dir()
+    5. alert(typeof arguments[1]);
+
+
+
+<span class="comment">## js干什么</span>
+* 数据验证
+* 添加事件
+* 操作dom对象 内容 样式  属性  
+* 动画
+* cookies
+* ajax
+* ...
+
+
+
+
+<span class="comment">##变量     ★声明变量★</span>
+&gt;  存储数据的容器
+
+<span class="comment">###★声明变量★</span>
+
+&gt; <span class="string">'var 变量名'</span>&lt;br&gt;
+&gt;  <span class="built_in">let</span> c=3;  //JS的严格模式
+
+    Example:
+    <span class="string">'use strict'</span>;
+    <span class="built_in">let</span> hello = <span class="string">'hello world.'</span>;
+    console.log(hello);
+
+ var 变量名=变量值;
+
+<span class="comment">####★变量名★</span>
+* 数字  字母  _ $  ,数字不能开头
+
+&gt; a12    a1a  _a  _$  <span class="variable">$a</span>  <span class="variable">$1</span>
+
+* 关键字和保留字不能作为变量名
+* 严格区分大小写
+* 首字母大写 Object Array String
+* 驼峰命名法   首字母大写
+    &gt;&gt;getElementsByTagName()
+* ;分号可加可不加
+
+<span class="comment">##### 第一种方式   声明的同时进行赋值</span>
+    var 变量=值  <span class="string">'var aa=1；'</span>
+
+<span class="comment">##### 第二种方式   先声明后赋值</span>
+    var 变量；变量=值；
+    var bb;
+    bb=<span class="string">"2"</span>;
+    alert(bb)
+
+<span class="comment">##### 第三种方式  一次性声明多个变量之后进行赋值</span>
+    var name,age,sex;
+    name=<span class="string">"caoyue"</span>;
+    age=33;
+    sex=<span class="string">"man"</span>;
+    alert(age,sex);
+
+<span class="comment">##### 第四种方式 一次性声明多个变量同时进行赋值</span>
+    var name=<span class="string">"xioaming"</span>,age=17,sex=<span class="string">"man"</span>;
+    alert(sex)
+
+<span class="comment">##### 直接调用一个未声明变量</span>
+    报错  变量未声明
+<span class="comment">##### 赋值之前进行调用，不给赋值</span>
+    默认值 undefined
+<span class="comment">##### 变量覆盖</span>
+    bb=2;  /*全局变量*/
+    undefined;  /*声明未定义*/
+
+    &lt;script&gt;        
+        var a=2;    
+        console.log(a)   //输出2
+        var a;        
+        console.log(a)   //输出2  因为第一次已经赋值，第二次没赋值
+        var a=5;    
+        console.log(a)   //输出5
+    &lt;/script&gt;    
+
+
+
+
+=====================================
+
+<span class="comment">#★★数据类型★★★★★★0418★★★★★★★★★</span>
+* 栈：容量小，速度快。简单数据，用于快速读取。存放初始数据类型
+* 堆：容量大，速度小。容量大的数据。存放引用数据类型
+
+
+&gt;number string  boolean undefined Object
+
+<span class="comment">###### 检测、判断数据类型 typeof</span>
+
+    var val=<span class="string">"uek"</span>;
+    alert(typeof val);
+    var num=Number.MAX_VALUE;
+    alert(num);
+    var min = Number.MIN_VALUE;
+    alert(min);
+       var val={name:<span class="string">"zhangsan"</span>};
+    alert(val);
+
+
+<span class="comment">### 1.初始类型</span>
+*    &lt;1&gt;数值  Number
+&gt;    数字/0/负数/八进制 011《会转化为十进制数显示》/十六进制0X11 / 科学计数法
+
+012  输出10
+018  输出18   因为是八进制最大是7，超过7就是十进制
+*    &lt;2&gt;字符串  String
+
+    双引号和单引号效果一样，允许相互嵌套
+    特殊字符   \n \r \t \\ \b  &amp;nbsp;&amp;nbsp;&amp;nbsp;第一个<span class="string">"\"为转义</span>
+<span class="string">&gt;    用"</span><span class="string">" '' 双引号或单引号中的值.</span>
+<span class="string"></span>
+<span class="string">*    &lt;3&gt;undefined</span>
+<span class="string">&gt;    未赋值</span>
+<span class="string"></span>
+<span class="string">*    &lt;4&gt;bull</span>
+<span class="string">&gt;    ‘true  false’ ***boolean***</span>
+<span class="string"></span>
+<span class="string">*    &lt;5&gt;null   占位符</span>
+<span class="string">&gt;    'null'    ***object***</span>
+<span class="string"></span>
+<span class="string">### 2.引用类型    object</span>
+<span class="string">    包含属性和方法的集合</span>
+<span class="string">        对象</span>
+<span class="string">        原生</span>
+<span class="string">        数组</span>
+<span class="string">        函数</span>
+<span class="string"></span>
+<span class="string">静态区：放常量</span>
+<span class="string"></span>
+<span class="string">#★★运算符★★★★★★20170419★★★★★★★★★</span>
+<span class="string"></span>
+<span class="string"> 概念：</span>
+<span class="string">*    表达式：操作数和运算符的组合；有结果的语句。</span>
+<span class="string"></span>
+<span class="string">### 1.算数运算符</span>
+<span class="string">    + - * / %取余   ++自加   --自减</span>
+<span class="string">*   '%' 取余一般用于取一段范围的值</span>
+<span class="string">*    ‘+’可用于字符串的拼接    、连接(字符串可以和任意的数据类型相加，相加结果为新的字符串)</span>
+<span class="string">*    模板字符串  <span class="variable">${字符串变量}</span></span>
+<span class="string">*    i++ 先运算后自增 ， ++i 先自增后运算</span>
+<span class="string">*    i++ 返回原来的值，++i 返回加1后的值。</span>
+<span class="string">#######Example</span>
+<span class="string">    var a = "</span>10<span class="string">";</span>
+<span class="string">    var b = 4;</span>
+<span class="string">        var res = a+b;</span>
+<span class="string">        alert(res)     //输出104</span>
+<span class="string">        alert(typeof res)    //输出string</span>
+<span class="string"></span>
+<span class="string">    var a = "</span>10<span class="string">";</span>
+<span class="string">    var b = 4;</span>
+<span class="string">        var res = a+b-4;</span>
+<span class="string">        alert(res)     //输出100</span>
+<span class="string">        alert(typeof res)   //number</span>
+<span class="string"></span>
+<span class="string">    var a = "</span>10<span class="string">";</span>
+<span class="string">    var b = 4;</span>
+<span class="string">        var res = b-4+a;</span>
+<span class="string">        alert(res)     //输出010</span>
+<span class="string">        alert(typeof res)   //string</span>
+<span class="string"></span>
+<span class="string">    var a = 37;</span>
+<span class="string">    var b = 33;</span>
+<span class="string">        var str='WUIF1702-1班有'+a+'人'</span>
+<span class="string">        alert(str)     //输出WUIF1702-1班有37人</span>
+<span class="string">        alert(typeof str)   //string</span>
+<span class="string"></span>
+<span class="string">    模板字符串  <span class="variable">${字符串变量}</span></span>
+<span class="string">    var a = 37,b = 33;</span>
+<span class="string">    var str1=`WUIF1702班有<span class="variable">${a}</span>人`;</span>
+<span class="string">        alert(str1)     //输出WUIF1702-1班有37人</span>
+<span class="string"></span>
+<span class="string">###### 字符串和其他类型相+时为连接的效果</span>
+<span class="string">    var str1="</span>hellow <span class="string">";</span>
+<span class="string">    var str2=123;</span>
+<span class="string">    var str3=str1+str2; //连接</span>
+<span class="string">        alert(str3);</span>
+<span class="string">        alert(str1%7); 取余</span>
+<span class="string"></span>
+<span class="string">    i++ 返回原来的值，++i 返回加1后的值。</span>
+<span class="string">    var n=1;</span>
+<span class="string">    var n2=++n;</span>
+<span class="string">        alert(n2);</span>
+<span class="string"></span>
+<span class="string">    ++n=2</span>
+<span class="string">    n++=1        </span>
+<span class="string"></span>
+<span class="string">    var num=22;</span>
+<span class="string">        alert(num++);   //22</span>
+<span class="string">        alert(++num);    //24</span>
+<span class="string">        alert(--num);    //23</span>
+<span class="string">        alert(num--);    //23</span>
+<span class="string">        alert(num);        //22</span>
+<span class="string">        alert(++11);    //错误   不能进行加减操作。num是个自变量，不能是定值</span>
+<span class="string">### 2.关系运算符(比较运算符)   </span>
+<span class="string">    &gt; &lt; &gt;= &lt;= ==相等   !=不等   !==   ===</span>
+<span class="string">*    运算结果为bull值：true false</span>
+<span class="string">*    ‘==’ 比较数值</span>
+<span class="string">*    ‘===’全等，比较数值和数据类型</span>
+<span class="string">##### 比较规则</span>
+<span class="string">*    两个数比较</span>
+<span class="string">*    两个字符型字符串。    会</span>
+<span class="string">*    成ACSII码比较</span>
+<span class="string">*   'b'&lt;'bc' 两个依次比较，直到第一个不一样的值的大小</span>
+<span class="string">*    两个数字型字符串。       会转换成ACSII码比较</span>
+<span class="string">*    数字型和字符串比较。    会尝试把字符串转换为数字型，若转换不成，返回NaN (not a number),表达式结果为false.</span>
+<span class="string">+    "</span>zumu<span class="string">" 引号里是字母的话，不能转换成数字,不能比较，“123”引号里是数字的话可以转换成数字，可以比较。</span>
+<span class="string">*    undefined == null (true)</span>
+<span class="string">*    undefined === null (false)</span>
+<span class="string">*    布尔值和数字，把布尔值转换成数字，true(1)  false(0)</span>
+<span class="string">######Example</span>
+<span class="string">    var num1="</span>20<span class="string">",num2="</span>5<span class="string">";</span>
+<span class="string">        var res=num1&gt;num2;</span>
+<span class="string">        alert(res);   //false</span>
+<span class="string"></span>
+<span class="string">    var num1="</span>-20<span class="string">";</span>
+<span class="string">        var num2=5;</span>
+<span class="string">        var res=num1&gt;num2;</span>
+<span class="string">        alert(res);   //false     ????????????????????</span>
+<span class="string"></span>
+<span class="string">    var num1="</span>-20<span class="string">";</span>
+<span class="string">        var num2=5;</span>
+<span class="string">        var res=num1&lt;num2;</span>
+<span class="string">        alert(res);   //true    ??????????????????????? </span>
+<span class="string"></span>
+<span class="string">    alert(true == 1); //true</span>
+<span class="string">        alert(true === 1);//false</span>
+<span class="string">        alert(false == 0);//true</span>
+<span class="string">        alert(false === 0);//false</span>
+<span class="string">        alert("</span><span class="literal">true</span><span class="string">" == 1);//false</span>
+<span class="string">        alert("</span><span class="literal">true</span><span class="string">" === 1);//false</span>
+<span class="string">        alert( undefined == null);//true</span>
+<span class="string">        alert( undefined === null);//false</span>
+<span class="string">        alert( 'undefined' == 'null');//false</span>
+<span class="string"></span>
+<span class="string">    var n1="</span>a<span class="string">";</span>
+<span class="string">        var n2="</span>c<span class="string">";</span>
+<span class="string">        var result=n1&gt;n2;</span>
+<span class="string">        alert(result)</span>
+<span class="string">        字符以第一个字母的ACSII值比较</span>
+<span class="string">        A 65    a  96    0  48 </span>
+<span class="string"></span>
+<span class="string">### 3.赋值运算符</span>
+<span class="string">    = += -+ *= /= %=</span>
+<span class="string">    var aa=10;</span>
+<span class="string">    aa+=1; </span>
+<span class="string">    alert(aa)   //输出是 aa=aa+1  11 </span>
+<span class="string">### 4.逻辑运算符</span>
+<span class="string">*    &amp;&amp;(and)与       ||(or)或        !(not)非</span>
+<span class="string">*    与运算，整个表达式的结果为真，其结果为最后一个表达式的值</span>
+<span class="string">*                     若表达式的结果为假，其结果为第一个假的表达式的值</span>
+<span class="string">*    undefined    false</span>
+<span class="string">*    逻辑运算符可以对任意的数据类型进行运算，在运算的工程中，转化对应的布尔值</span>
+<span class="string">*    undefined    null    0    空字符“”        false  NaN</span>
+<span class="string">######  &amp;&amp; 与</span>
+<span class="string">    var result=!false;</span>
+<span class="string">    var a=10;</span>
+<span class="string">        var b=20;</span>
+<span class="string">        var res= a&lt;b &amp;&amp; ++a;   //输出11 </span>
+<span class="string">        alert(res);</span>
+<span class="string">    表达式的结果为真，其结果为最后一个表达式的值</span>
+<span class="string">    var res= undefined &amp;&amp; ++a;   //输出undefined </span>
+<span class="string">    表达式的结果为假，其结果为第一个假的表达式的值</span>
+<span class="string">    var res= {} &amp;&amp; ++a;   //输出11   {}为对象</span>
+<span class="string">    var res= {} &amp;&amp; 0;   //输出0   0为假值，输出第一个假值    </span>
+<span class="string">######  || 或  or</span>
+<span class="string">    var a=10;</span>
+<span class="string">    var b=20;</span>
+<span class="string">    alert( a&gt;b || b&lt;a || a ); //10</span>
+<span class="string">### 5.一元运算符</span>
+<span class="string">*    typeof</span>
+<span class="string">*    ‘+ -’  正号  负号</span>
+<span class="string">*    delete    删除对象的方法或属性</span>
+<span class="string">*    new     创建对象</span>
+<span class="string">### 6.三元运算符</span>
+<span class="string">    根据表达式的结果，选择性的给变量赋值</span>
+<span class="string">    var aa=15;</span>
+<span class="string">    var bb=aa&gt;10?aa:5</span>
+<span class="string"></span>
+<span class="string">### 7.特殊运算符</span>
+<span class="string">    ,  一次声明多个变量</span>
+<span class="string">    ()  在运算的时候有优先级的作用</span>
+<span class="string">        让函数运行</span>
+<span class="string">    var num1=(10+10)*10;</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">#★0419★★流程控制★★★★★★★★★★★★★★★★★★</span>
+<span class="string"></span>
+<span class="string">    流程：执行代码的顺序</span>
+<span class="string">### 1.顺序结构</span>
+<span class="string">    -按照书写顺序来执行</span>
+<span class="string">### 2.选择结构</span>
+<span class="string">    -根据给定的条件有选择的执行响应的条件语句</span>
+<span class="string">######    &lt;1&gt;分支结构</span>
+<span class="string">    注意if  else的顺序</span>
+<span class="string"></span>
+<span class="string">*        单路分支  if(条件){条件成立执行}</span>
+<span class="string">*        双路分支 if(条件){条件成立执行}else{条件不成立执行}</span>
+<span class="string">*        多路分支 if</span>
+<span class="string">*        嵌套分支（满足条件不可以有重复的部分，会发生未知错误）</span>
+<span class="string"></span>
+<span class="string">###### 如果判断条件是范围，优先用if else ,条件是单个值，优先用switch</span>
+<span class="string">        var aa=1234;</span>
+<span class="string">        if(aa&lt;10){</span>
+<span class="string">            alert("</span>1<span class="string">")</span>
+<span class="string">        }else if(aa&gt;=10&amp;&amp;aa&lt;20){</span>
+<span class="string">            alert("</span>2<span class="string">")</span>
+<span class="string">        }else{</span>
+<span class="string">            if(typeof aa=="</span>number<span class="string">" ) {</span>
+<span class="string">                alert("</span>其他<span class="string">")</span>
+<span class="string">            }</span>
+<span class="string">        }</span>
+<span class="string"></span>
+<span class="string">*    &lt;2&gt;条件结构</span>
+<span class="string"></span>
+<span class="string">        var bb=3;</span>
+<span class="string">        switch(bb){</span>
+<span class="string">            case 1:alert("</span>第一种<span class="string">");</span>
+<span class="string">            break;</span>
+<span class="string">            case 2:alert("</span>第二种<span class="string">");</span>
+<span class="string">            break;</span>
+<span class="string">            default:alert("</span>其他<span class="string">")</span>
+<span class="string">        }</span>
+<span class="string"></span>
+<span class="string">### 3.循环结构</span>
+<span class="string">*    for一般用于循环指定的次数</span>
+<span class="string">*    while是根据条件的增加来循环，当真的时候进行循环，假的时候退出循环</span>
+<span class="string">*    跳转语句：break  </span>
+<span class="string">*    </span>
+<span class="string">*    </span>
+<span class="string">*    continue </span>
+<span class="string">######  break</span>
+<span class="string">    document.write('hahaha&lt;br&gt;')</span>
+<span class="string">    aa:for(var i=0;i&lt;5;i++){</span>
+<span class="string">        if(i==2){</span>
+<span class="string">            break aa;</span>
+<span class="string">        }</span>
+<span class="string">        document.write(i); //输出01</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">    document.write('hahaha&lt;br&gt;')</span>
+<span class="string">    aa:for(var i=0;i&lt;5;i++){</span>
+<span class="string">        for(var j=0;j&lt;6;j++){</span>
+<span class="string">            if(j==2){</span>
+<span class="string">                break;</span>
+<span class="string">                //输出01  01   01   01   01   01</span>
+<span class="string">            }</span>
+<span class="string">            document.write(j); </span>
+<span class="string">        }</span>
+<span class="string">        document.write('&lt;br&gt;'); </span>
+<span class="string">    }</span>
+<span class="string">######  continue</span>
+<span class="string">    document.write('hahaha&lt;br&gt;')</span>
+<span class="string">    aa:for(var i=0;i&lt;5;i++){</span>
+<span class="string">        if(i==2){</span>
+<span class="string">            continue aa; //跳过 2,继续执行后边的。最后输出0134</span>
+<span class="string">        }</span>
+<span class="string">        document.write(i)</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">    document.write('hahaha&lt;br&gt;')</span>
+<span class="string">    aa:for(var i=0;i&lt;5;i++){</span>
+<span class="string">        for(var j=0;j&lt;6;j++){</span>
+<span class="string">            if(j==2){</span>
+<span class="string">                continue aa;</span>
+<span class="string">                //输出01 0101 01 01 01</span>
+<span class="string">            }</span>
+<span class="string">            document.write(j); </span>
+<span class="string">        }</span>
+<span class="string">        document.write('&lt;br&gt;'); </span>
+<span class="string">    }</span>
+<span class="string">######  for  满足给定条件下重复执行某一段代码</span>
+<span class="string"></span>
+<span class="string">    'for(条件初始化；终止条件；步进值){循环体}'</span>
+<span class="string">    for(var i=0;i&lt;10;i++){</span>
+<span class="string">        console.log(1)</span>
+<span class="string">    //        alert(i);</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">######      奇数增  偶数增</span>
+<span class="string"></span>
+<span class="string">    for(var i=1;i&lt;=10;i+=2){</span>
+<span class="string">            alert(i);</span>
+<span class="string">        }</span>
+<span class="string"></span>
+<span class="string">######     倒三角</span>
+<span class="string">        for(var i=1;i&lt;=20;i++){</span>
+<span class="string">            for(var j=10;j&gt;=i+1;j--){</span>
+<span class="string">                document.write("</span>*<span class="string">");</span>
+<span class="string">            }</span>
+<span class="string">            document.write('&lt;br&gt;'); //换行</span>
+<span class="string">        }</span>
+<span class="string"></span>
+<span class="string">######     九九乘法表</span>
+<span class="string">        for(var i=1;i&lt;=10;i++){</span>
+<span class="string">            for(var j=1;j&lt;=i;j++){</span>
+<span class="string">                document.write(i+'*'+j+'&amp;nbsp;&amp;nbsp;&amp;nbsp;');</span>
+<span class="string">    //            document.write(`<span class="variable">${i}</span>*<span class="variable">${j}</span>=<span class="variable">${i*j}</span>;   `)</span>
+<span class="string">            }</span>
+<span class="string">            document.write('&lt;br&gt;'); //换行</span>
+<span class="string">        }</span>
+<span class="string">######     while  先判断后执行</span>
+<span class="string">    var aa=10;</span>
+<span class="string">    while(aa&lt;20){</span>
+<span class="string">        console.log(aa);</span>
+<span class="string">        aa++;</span>
+<span class="string">    }</span>
+<span class="string">######     while if  循环+判断 </span>
+<span class="string">    var aa=10;</span>
+<span class="string">    while(aa&lt;20){</span>
+<span class="string">        aa++;</span>
+<span class="string">        if(aa==15){</span>
+<span class="string">    //            break;</span>
+<span class="string">            continue;</span>
+<span class="string">            //当aa=15时终止当前循环，继续执行下一次循环。</span>
+<span class="string">        }</span>
+<span class="string">        console.log(aa);</span>
+<span class="string">    }</span>
+<span class="string">######     do  while</span>
+<span class="string">    do{</span>
+<span class="string">         alert('do');</span>
+<span class="string">         a++;</span>
+<span class="string">     }</span>
+<span class="string">     while(a&lt;12);</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">## ★0419★★★★★★★★★★数组★★★★★★★</span>
+<span class="string">*    存储一组或一系列相关数据的容器</span>
+<span class="string">*    数组的下标从0开始</span>
+<span class="string">*    空元素        arr[i]=undefined</span>
+<span class="string">*    空数组          arr.push()</span>
+<span class="string">######    空数组    push</span>
+<span class="string">    var arr=[1,2,5,,"</span>a<span class="string">","</span>d<span class="string">",,"</span>s<span class="string">"]</span>
+<span class="string">    var newarr=[];</span>
+<span class="string">    for(var i=0;i&lt;arr.length;i++){</span>
+<span class="string">        if(arr[i]!=undefined){</span>
+<span class="string">            newarr.push(arr[i]);</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    document.write(newarr)</span>
+<span class="string">#####删除数组里面的空值    </span>
+<span class="string">    var arr=[1,3,23,43,,23,3,,4,32,,43,,3,43,,,,,,,23]</span>
+<span class="string">        var arr1=[];</span>
+<span class="string">        var j=0;</span>
+<span class="string">        document.write('原数组为：&amp;nbsp;'+arr);</span>
+<span class="string">        document.write('&lt;br&gt;原长度为：&amp;nbsp;'+arr.length);</span>
+<span class="string">        for(var i=0;i&lt;arr.length;i++){</span>
+<span class="string">            if(arr[i]!=undefined){</span>
+<span class="string">                arr1[j]=arr[i];</span>
+<span class="string">                j++;</span>
+<span class="string">            }</span>
+<span class="string">        }</span>
+<span class="string">        document.write('&lt;br&gt;&lt;br&gt;数组为：&amp;nbsp;'+arr1);</span>
+<span class="string">        document.write('&lt;br&gt;长度为：&amp;nbsp;'+arr1.length);</span>
+<span class="string"></span>
+<span class="string">####数组声明</span>
+<span class="string">    `var arr=[]`//空数组</span>
+<span class="string"></span>
+<span class="string">    var arr=[];</span>
+<span class="string">    arr[0]=10;</span>
+<span class="string">    arr[1]=13;</span>
+<span class="string">    arr[2]=41;</span>
+<span class="string">    alert(arr)</span>
+<span class="string"></span>
+<span class="string">    //Array 数组的构造函数</span>
+<span class="string">    var arr2=new Array(1,2,3);</span>
+<span class="string">    alert(arr2)</span>
+<span class="string"></span>
+<span class="string">    var arr2=new Array();</span>
+<span class="string">    arr2[0] = 90;</span>
+<span class="string">    arr2[1] = 91;</span>
+<span class="string">    arr2[2] = 92;</span>
+<span class="string">    alert(arr2)</span>
+<span class="string">#### 数组 赋值</span>
+<span class="string">*    声明的同时进行赋值</span>
+<span class="string">    `var arr=[10,15,20]`</span>
+<span class="string">*    先声明后赋值</span>
+<span class="string">    `var arr=[]; </span>
+<span class="string">    arr[0]=1; </span>
+<span class="string">    arr[1]=2;`</span>
+<span class="string">#### 数组 访问</span>
+<span class="string">*    下标访问。下标从0开始。</span>
+<span class="string">#### 数组长度      arr.length</span>
+<span class="string"></span>
+<span class="string">#### 数组遍历</span>
+<span class="string">*    for  </span>
+<span class="string">*    while</span>
+<span class="string">#### ◇数组◇</span>
+<span class="string">console.log(arr2)</span>
+<span class="string">console.dir(arr2)   //显示数组细节</span>
+<span class="string">alert(arr2.length)  //输出数组长度</span>
+<span class="string">#### 注意</span>
+<span class="string">*     数组的长度是可变的 </span>
+<span class="string">*    可存储任意的数据类型</span>
+<span class="string">*    数组元素如果没有值，默认undefined</span>
+<span class="string">*    数组长度是可变的</span>
+<span class="string"></span>
+<span class="string">##### 可存储任意的数据类型</span>
+<span class="string">    var arr3=["</span>uek<span class="string">",1,undefined,true,null,function(){},arr2]</span>
+<span class="string">    alert(arr3)</span>
+<span class="string"></span>
+<span class="string">##### 练习1：数组最大最小值</span>
+<span class="string">    var arr=[90,20,80,113,4,3,54,34,89];</span>
+<span class="string">    var max=arr[0];</span>
+<span class="string">    for(var i=0;i&lt;=arr.length-1;i++){</span>
+<span class="string">        if(arr[i]&gt;max){</span>
+<span class="string">            max=arr[i]</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    alert(max)</span>
+<span class="string">##### 练习2. 冒泡排序</span>
+<span class="string">    /*</span>
+<span class="string">    arr=[90,20,80,113,4,3,54];</span>
+<span class="string"></span>
+<span class="string">    1. min=arr[0];</span>
+<span class="string">       90 20 80 113 4 3 54</span>
+<span class="string">       20 90 80 113 4 3 54</span>
+<span class="string"></span>
+<span class="string">    2. min=arr[1]</span>
+<span class="string">       20 90 80 113 4 3 54</span>
+<span class="string">       20 80 90 113 4 3 54</span>
+<span class="string">    */</span>
+<span class="string">        var arr=[7,13,76,34,9,23,65,2];</span>
+<span class="string">        for(var i=0;i&lt;arr.length;i++){</span>
+<span class="string">            for(var j=i+1;j&lt;arr.length;j++){</span>
+<span class="string">                if(arr[i]&gt;arr[j]){</span>
+<span class="string">                    var flag=arr[i];</span>
+<span class="string">                    arr[i]=arr[j];</span>
+<span class="string">                    arr[j]=flag;</span>
+<span class="string">            //        arr[j]=arr[i]+arr[j];</span>
+<span class="string">            //        arr[i]=arr[j]-arr[i];</span>
+<span class="string">            //        arr[j]=arr[j]-arr[i];</span>
+<span class="string">                }</span>
+<span class="string">            }</span>
+<span class="string">        }</span>
+<span class="string">        document.write(arr)</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">#### ◇数组◇</span>
+<span class="string">var arr2=new Array(4);</span>
+<span class="string">//    console.log(arr2)</span>
+<span class="string">    console.dir(arr2)   //显示数组细节</span>
+<span class="string">    输出为 [undefined,undefined,undefined,undefined]</span>
+<span class="string">    在数组实例化的时候,如果只传递一个参数的话,这个参数表示数组的长度.新数组的长度是可变的,随着参数的变化而变化</span>
+<span class="string"></span>
+<span class="string">#### 查找数组里的第i行的第j个值</span>
+<span class="string">     for   while   for in</span>
+<span class="string"></span>
+<span class="string">    var arr4=[[1,2,3],[4,5,6],[7,8,9]];</span>
+<span class="string"></span>
+<span class="string">    for(var i = 0; i &lt; arr4.length; i++){</span>
+<span class="string">        for(var j = 0; j &lt; arr4[i].length; j++){</span>
+<span class="string">            console.log(arr4[i][j])    //数组里的第i个的第j个值</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">#######取得二维度数组中长度最大的数组    </span>
+<span class="string">    var arr=[[1],[2,3,4],[42,34,432,32,234,432,234],[1,12,12,21,23]];</span>
+<span class="string">    var max=0;</span>
+<span class="string">    var flag=[];</span>
+<span class="string">    for(var i=0;i&lt;arr.length;i++){</span>
+<span class="string">        if(max&lt;arr[i].length){</span>
+<span class="string">            max=arr[i].length;</span>
+<span class="string">            flag=arr[i];</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    document.write('长度最大的数组为：&amp;nbsp;'+flag);</span>
+<span class="string">    document.write('&lt;br&gt;最大长度为：&amp;nbsp;'+max);</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">#★★★★★★★★20170420★★★★★★★★★</span>
+<span class="string">#表格</span>
+<span class="string">    var table='';</span>
+<span class="string">        table+='&lt;table border=1 &gt;';</span>
+<span class="string">        for(var i=0;i&lt;6;i++){</span>
+<span class="string">            table+='&lt;tr&gt;';</span>
+<span class="string">            for(var j=0;j&lt;6;j++){</span>
+<span class="string">                table+='&lt;td&gt;';</span>
+<span class="string">                table+=j;</span>
+<span class="string">                table+='&lt;/td&gt;';</span>
+<span class="string">            }</span>
+<span class="string">            table+='&lt;/tr&gt;';</span>
+<span class="string">        }</span>
+<span class="string">        table+='&lt;/table&gt;';</span>
+<span class="string">        document.write(table);</span>
+<span class="string"></span>
+<span class="string">    表格方法2</span>
+<span class="string">        document.write('&lt;table border=1&gt;' );</span>
+<span class="string">        for(var i=0;i&lt;5;i++){</span>
+<span class="string">            document.write('&lt;tr&gt;'+i);</span>
+<span class="string">            for(var j=0;j&lt;6;j++){</span>
+<span class="string">                document.write('&lt;td&gt;'+j+'&lt;/td&gt;');</span>
+<span class="string">            }</span>
+<span class="string">            document.write('&lt;/tr&gt;');</span>
+<span class="string">        }</span>
+<span class="string">        document.write('&lt;/table&gt;');</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">## ★0420★★★★★★★★★★函数★★★★★★★</span>
+<span class="string">将实现某一特定功能的代码集合起来重复调用的代码块</span>
+<span class="string"></span>
+<span class="string"># ★函数★</span>
+<span class="string">    将一段特定功能的代码块封装起来重复调用</span>
+<span class="string">*    调用函数需要写函数名的括号 "</span>()<span class="string">" </span>
+<span class="string">*    后边声明的函数会覆盖之前的</span>
+<span class="string">*    字面量函数必须在后面调用</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">#### ◆函数声明◆</span>
+<span class="string">    1.基本语法&lt;br&gt;</span>
+<span class="string">    function fnName([参数1]，[参数2],...){</span>
+<span class="string">        函数体</span>
+<span class="string">        [return 返回值;]</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">    2.字面量方式</span>
+<span class="string">    var 变量名([参数1]，[参数2],...){</span>
+<span class="string">        函数体 </span>
+<span class="string">        [return 返回值;]</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">    3.//实例化对象的</span>
+<span class="string">    var    funobj=new Function();</span>
+<span class="string"></span>
+<span class="string">#### ◆函数调用◆</span>
+<span class="string">    1.val();</span>
+<span class="string">    2.在事件只有之后调用</span>
+<span class="string">    3.函数 自调用:在函数外加个小括号</span>
+<span class="string">    (function fun(){})();</span>
+<span class="string">*    调用注意：</span>
+<span class="string">函数名相同时，后面的函数会覆盖前面的函数</span>
+<span class="string">*    一基本语法声明的函数</span>
+<span class="string">####先定义后调用</span>
+<span class="string">*    在不同的`&lt;script&gt;&lt;/script&gt;`中浏览器按照从上到下的顺序进行解析，后面的代码块可以调用前面的函数，前面的代码块不能调用后面的 函数</span>
+<span class="string"></span>
+<span class="string">######基本语法   *弹出1*    可以在前面调用 </span>
+<span class="string">    tan1();</span>
+<span class="string">    function tan1(){</span>
+<span class="string">        alert(1);</span>
+<span class="string">    }</span>
+<span class="string">    tan1(); </span>
+<span class="string"></span>
+<span class="string">######字面量方式    必须在函数后面调用</span>
+<span class="string">    var tan2=function(){</span>
+<span class="string">        alert(2);</span>
+<span class="string">    }</span>
+<span class="string">    tan2();</span>
+<span class="string"></span>
+<span class="string">    var tan1=function(){</span>
+<span class="string">        alert(1);</span>
+<span class="string">    }</span>
+<span class="string">    tan1(); //输出1</span>
+<span class="string"></span>
+<span class="string">    var tan1=function(){</span>
+<span class="string">        alert(2)</span>
+<span class="string">    }</span>
+<span class="string">    tan1();//输出2</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">#### ◆运行函数◆</span>
+<span class="string">函数名</span>
+<span class="string">*    table()</span>
+<span class="string"></span>
+<span class="string">变量名</span>
+<span class="string">*    table()</span>
+<span class="string"></span>
+<span class="string">自调用    </span>
+<span class="string">*    `(function(){}){}`</span>
+<span class="string"></span>
+<span class="string">#### ◆函数的参数◆</span>
+<span class="string">&gt;    考虑 参数、几个参数、参数类型、要不要给默认值</span>
+<span class="string"></span>
+<span class="string">*    形参      声明的时候。接受实参传递的值</span>
+<span class="string">*    形参参数名不能相同</span>
+<span class="string">*    实参        调用的时候。给形参传递值</span>
+<span class="string">*    tan(1,,4) 错误！！    函数参数不能为空    </span>
+<span class="string">*    tan(1,undefinned,4)        函数不会报错  输出若有默认值，会代替undefined。</span>
+<span class="string">*    tan(undefined,null,4)    输出 undefined null 3 ,null不会被替换，    </span>
+<span class="string">*    tan(1,2,,)    空格在最后</span>
+<span class="string">*    function tan(a,b,c=5) { //形参带默认值的会默认放在最后 c=5 放在最后}</span>
+<span class="string">*    </span>
+<span class="string">*    默认值num===undefined?'zhangsan':num;</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">######    rest</span>
+<span class="string">    // REST函数  rest参数</span>
+<span class="string">    function addnum(...values){  //将值打包给values</span>
+<span class="string">        document.write(values);</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">    function addnum(a,...values){ //将没有值打包给values</span>
+<span class="string">        document.write(values);</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">######    参数重载</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">####    参数初始化的方法</span>
+<span class="string">    1. if</span>
+<span class="string">    2. 三元化    num= num===undefined ?'zhangsan':num;</span>
+<span class="string">    3. num= num?num:'zhangsan';</span>
+<span class="string">    4. num= num || 'zhangsan';</span>
+<span class="string">    5. function tan(num='zhangsan'){</span>
+<span class="string">            document.write(num);</span>
+<span class="string">        }</span>
+<span class="string"></span>
+<span class="string">*    function tan(num='zahngsan'){</span>
+<span class="string">            num==num?num:'zhangsan'</span>
+<span class="string">            document.write(num)</span>
+<span class="string">        }</span>
+<span class="string">        tan(2)</span>
+<span class="string"></span>
+<span class="string">######  形参 返回值</span>
+<span class="string">    function sum(num1,num2){//形参</span>
+<span class="string">        num3=num1+num2;</span>
+<span class="string">        return num3;</span>
+<span class="string">    }</span>
+<span class="string">    var result=sum(10,11);</span>
+<span class="string">    alert(result);</span>
+<span class="string"></span>
+<span class="string">    function tan(num){</span>
+<span class="string">        alert(num);</span>
+<span class="string">    }</span>
+<span class="string">    tan(5);        //弹出5</span>
+<span class="string">    tan(9);        //弹出9    </span>
+<span class="string"></span>
+<span class="string">####### 写表格    注意 table 声明 var     </span>
+<span class="string">    //  弹出框</span>
+<span class="string">    function table(rows,cols){</span>
+<span class="string">        var table='';</span>
+<span class="string">        table+='&lt;table border=1&gt;';</span>
+<span class="string">        for(var i=0;i&lt;rows;i++){</span>
+<span class="string">            table+='&lt;tr&gt;';</span>
+<span class="string">            for(var j=0;j&lt;cols;j++){</span>
+<span class="string">                table+='&lt;td&gt;'+j+'&lt;/td&gt;';</span>
+<span class="string">            }</span>
+<span class="string">            table+='&lt;/tr&gt;';</span>
+<span class="string">        }</span>
+<span class="string">        table+='&lt;/table&gt;&lt;br&gt;';</span>
+<span class="string">        document.write(table);</span>
+<span class="string">    }</span>
+<span class="string">    table(1,2);</span>
+<span class="string">    table(5,5);</span>
+<span class="string">    table(9,9);</span>
+<span class="string"></span>
+<span class="string">#### ◆type 检测参数的类型◆</span>
+<span class="string">    function type(i){</span>
+<span class="string">        if(typeof i =='number'){</span>
+<span class="string">            document.write('number');</span>
+<span class="string">        }else if(typeof i=='string'){</span>
+<span class="string">            document.write('string');</span>
+<span class="string">        }else{</span>
+<span class="string">            document.write('其他')</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    type(null);</span>
+<span class="string">    type(2);</span>
+<span class="string">    type('a')</span>
+<span class="string"></span>
+<span class="string">####  pushadd  给某一个数组在他的最后添加一个元素</span>
+<span class="string">    ele  永远是个数组，当没数时为空数组</span>
+<span class="string">    /*function pushadd(arr,ele){</span>
+<span class="string">        arr[arr.length]=ele;  </span>
+<span class="string">        document.write(arr);</span>
+<span class="string">    }*/   </span>
+<span class="string"></span>
+<span class="string">    function pushadd(arr,...ele){</span>
+<span class="string">        for(var i=0;i&lt;ele.length;i++){</span>
+<span class="string">            arr[arr.length]=ele[i];</span>
+<span class="string">        }</span>
+<span class="string">        document.write(arr);</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">##### ★模拟函数重载★</span>
+<span class="string">    同一个函数因为参数的类型或数量不同，可以对应多个函数的实现，每种实现对应一个函数体</span>
+<span class="string">    //  求1-10的累加和</span>
+<span class="string">    function fun(){</span>
+<span class="string">        if(arguments.length == 1){</span>
+<span class="string">            var sum=0;</span>
+<span class="string">            for (var i = 0; i &lt;= arguments[0]; i++){</span>
+<span class="string">                sum+=i;</span>
+<span class="string">            };</span>
+<span class="string">    //            return sum;</span>
+<span class="string">        }else if(arguments.length == 2){</span>
+<span class="string">            return arguments[0]+arguments[1]</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    var num=fun(60,40)</span>
+<span class="string">    alert(num)</span>
+<span class="string"></span>
+<span class="string">####  ◆arguments 对象◆</span>
+<span class="string">    console.log(arguments);    //以数组形式输出</span>
+<span class="string">    alert(arguments.length);   //输出实参的个数</span>
+<span class="string">    alert(arguments.callee)    //输出function    获取函数本身</span>
+<span class="string">    alert(typeof(arguments[1]));   //数组类型</span>
+<span class="string"></span>
+<span class="string">*    实参比形参多    arguments</span>
+<span class="string">*    形参比实参多    undefined</span>
+<span class="string"></span>
+<span class="string">##### ★return★   返回值</span>
+<span class="string">*    函数默认值  undefined</span>
+<span class="string">*    可以是任意的数据类型，只能返回一个值</span>
+<span class="string">*    终止函数运行</span>
+<span class="string">*    函数体内部可以有多个return，但只执行一个    在分支语句中</span>
+<span class="string"></span>
+<span class="string">##### eg:第一步就判断  返回</span>
+<span class="string">    `function num(ele){</span>
+<span class="string">        if(typeof ele != 'number'){</span>
+<span class="string">            return 7;</span>
+<span class="string">        }</span>
+<span class="string">        if(ele%2==0){</span>
+<span class="string">            return '偶数';</span>
+<span class="string">        }else{</span>
+<span class="string">            return '奇数';</span>
+<span class="string">        }</span>
+<span class="string">    }`</span>
+<span class="string">    num(1);</span>
+<span class="string">    document.write(num(1))</span>
+<span class="string"></span>
+<span class="string">    //返回任意数据类型</span>
+<span class="string">    function aa(ele){</span>
+<span class="string">        console.log(ele);</span>
+<span class="string">        //return ele;  //可以返回任意数据类型   没有return的话，ele的值只能看，不能用</span>
+<span class="string">    }</span>
+<span class="string">    var a=aa(1);</span>
+<span class="string">    console.log(a);</span>
+<span class="string"></span>
+<span class="string">    //只允许返回一个值   返回c</span>
+<span class="string">    /*function aa(ele){</span>
+<span class="string">        console.log(ele);</span>
+<span class="string">        return ele;}</span>
+<span class="string">    var a=aa(aa);       //返回函数运行</span>
+<span class="string">    console.log(a);*/</span>
+<span class="string"></span>
+<span class="string">    function aa(ele){</span>
+<span class="string">        console.log(ele);</span>
+<span class="string">        return 'a','b','c';  //只允许返回一个值   返回c</span>
+<span class="string">    }</span>
+<span class="string">    var a=aa(1);</span>
+<span class="string">    console.log(a);</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">### ★0421★★★★★★★★★★函数★★★★★★★</span>
+<span class="string"></span>
+<span class="string">######  判断  push 是不是数组</span>
+<span class="string">    if(push instanceof Array){  //判断    push 是不是数组 }</span>
+<span class="string"></span>
+<span class="string">######    + - * / 运算</span>
+<span class="string">    function calc(num1,num2,ysf){</span>
+<span class="string">        if(ysf=='+'){</span>
+<span class="string">            return num1+num2;</span>
+<span class="string">        }else if(ysf=='-'){</span>
+<span class="string">            return num1-num2;</span>
+<span class="string">        }else if(ysf=='*'){</span>
+<span class="string">            return num1*num2;</span>
+<span class="string">        }else if(ysf=='/'){</span>
+<span class="string">            return num1/num2;</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    var a=calc(2,4,'/');</span>
+<span class="string">    document.write(a);</span>
+<span class="string"></span>
+<span class="string">######    回调函数      通过函数的指针来调用函数</span>
+<span class="string">    一个函数作为另一个函数的参数（形参）调用</span>
+<span class="string">    function math(num3,num4,fn){</span>
+<span class="string">        return fn(num3,num4);</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">    function aa(num1,num2){</span>
+<span class="string">        return num1+num2;</span>
+<span class="string">    }</span>
+<span class="string">    function bb(num1,num2){</span>
+<span class="string">        return num1-num2;</span>
+<span class="string">    }</span>
+<span class="string">    function cc(num1,num2){</span>
+<span class="string">        return num1*num2;</span>
+<span class="string">    }</span>
+<span class="string">    function dd(num1,num2){</span>
+<span class="string">        return num1/num2;</span>
+<span class="string">    }</span>
+<span class="string"></span>
+<span class="string">    var b=math(7,2,cc);</span>
+<span class="string">    document.write(b);</span>
+<span class="string"></span>
+<span class="string">######    箭头函数   ES6 新加的</span>
+<span class="string">    var s2=ele =&gt; ele;</span>
+<span class="string">    //  函数名=形参=&gt;返回值；</span>
+<span class="string">    var s3=s2(123);</span>
+<span class="string">    document.write(s3+'&lt;br&gt;');</span>
+<span class="string"></span>
+<span class="string">    var s2=(ele1,ele2) =&gt; {return ele1+ele2};</span>
+<span class="string">    //  函数名=形参=&gt;返回值；</span>
+<span class="string">    var s3=s2(123,1);</span>
+<span class="string">    document.write(s3+'&lt;br&gt;');</span>
+<span class="string"></span>
+<span class="string">    var aa=function(ele){</span>
+<span class="string">        return ele;</span>
+<span class="string">    }</span>
+<span class="string">    var resule=aa('a');</span>
+<span class="string">    var dd= (ele,ele1) =&gt; 'a1';</span>
+<span class="string">    var ee= (ele,ele1) =&gt; {return ele+ele1};</span>
+<span class="string">    var ff=(ele,ele1) =&gt; {alert(arguments.length)};</span>
+<span class="string">    alert(ee(1,2))</span>
+<span class="string"></span>
+<span class="string">######    递归函数</span>
+<span class="string">    function down(num){</span>
+<span class="string">        if(num&lt;=0){</span>
+<span class="string">            return num;</span>
+<span class="string">        }</span>
+<span class="string">        document.write(num+'&lt;br&gt;');</span>
+<span class="string">        down(--num);</span>
+<span class="string">    }</span>
+<span class="string">    down(10)</span>
+<span class="string"></span>
+<span class="string">######    递归阶层</span>
+<span class="string">    function jc(num){</span>
+<span class="string">        if(num==1){</span>
+<span class="string">            return 1;</span>
+<span class="string">        }else{</span>
+<span class="string">            return num*jc(--num);</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    var val=jc(5);</span>
+<span class="string">    document.write(val+'&lt;br&gt;');</span>
+<span class="string"></span>
+<span class="string">#### 视频.函数高级用法</span>
+<span class="string">    &lt;3&gt;闭包函数</span>
+<span class="string">        function aa(){</span>
+<span class="string">            var num=10;</span>
+<span class="string">            function bb(){   //闭包函数</span>
+<span class="string">                num++;</span>
+<span class="string">                return num;</span>
+<span class="string">            }</span>
+<span class="string">            return bb;</span>
+<span class="string">        }</span>
+<span class="string">        var val = aa();</span>
+<span class="string">        alert(val())</span>
+<span class="string">        alert(val())</span>
+<span class="string">        alert(val())</span>
+<span class="string">外层函数调用内层函数的局部变量</span>
+<span class="string"></span>
+<span class="string">## ★★★作用域★★★★★★20170421★★★★★★★</span>
+<span class="string"></span>
+<span class="string">#### 环境</span>
+<span class="string">*    宿主环境</span>
+<span class="string">*    执行环境</span>
+<span class="string">    + 全局变量</span>
+<span class="string">    + 局部变量</span>
+<span class="string">*    形参属于局部变量</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">#### 1.变量的作用域</span>
+<span class="string">    &lt;1&gt;全局变量</span>
+<span class="string">    &lt;2&gt;局部变量</span>
+<span class="string">        num = 5;     //全局变量 </span>
+<span class="string">        var val1 = 10;   //全局变量</span>
+<span class="string">        function fun3(){</span>
+<span class="string">            var val2 = 20;   //局部变量</span>
+<span class="string">            function inner(){  //局部函数变量</span>
+<span class="string">                alert(1);</span>
+<span class="string">            }</span>
+<span class="string">            inner();</span>
+<span class="string">        }</span>
+<span class="string">        fun3();</span>
+<span class="string">    &lt;3&gt;作用域链</span>
+<span class="string">        var val1 = 10;   //全局变量</span>
+<span class="string">        function fun3(){   </span>
+<span class="string">            var val1 = 20;   //局部变量</span>
+<span class="string">            alert(val1)</span>
+<span class="string">        }</span>
+<span class="string">        fun3()</span>
+<span class="string"></span>
+<span class="string">    var b=1;</span>
+<span class="string">        function aa(){</span>
+<span class="string">            document.write(b);   //输出  undefined</span>
+<span class="string">            var b=2;</span>
+<span class="string">            document.write(b);   //输出  2</span>
+<span class="string">        }</span>
+<span class="string">        aa();</span>
+<span class="string">        document.write(b);   //输出  1</span>
+<span class="string"></span>
+<span class="string">    var b=1;</span>
+<span class="string">        function aa(){</span>
+<span class="string">            document.write(b);   //输出  2</span>
+<span class="string">            b=2;</span>
+<span class="string">            document.write(b);   //输出  2</span>
+<span class="string">        }</span>
+<span class="string">        aa();</span>
+<span class="string">        document.write(b);   //输出  1</span>
+<span class="string"></span>
+<span class="string">        var b=1;</span>
+<span class="string">            aa();</span>
+<span class="string">            document.write('这是1--'+b+'&lt;br&gt;');</span>
+<span class="string"></span>
+<span class="string">            function aa(){</span>
+<span class="string">                document.write('这是2--'+b+'&lt;br&gt;');</span>
+<span class="string">                var b=2;</span>
+<span class="string">                document.write('这是3--'+b+'&lt;br&gt;');</span>
+<span class="string">            }</span>
+<span class="string">            输出:</span>
+<span class="string">                这是2--undefined //里面有b，只是没赋值，所以为undefined</span>
+<span class="string">                这是3--2</span>
+<span class="string">                这是1--1</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">        var b=1;</span>
+<span class="string">            aa();</span>
+<span class="string">            document.write('这是1--'+b+'&lt;br&gt;');   </span>
+<span class="string">            function aa(){</span>
+<span class="string">                document.write('这是2--'+b+'&lt;br&gt;');  </span>
+<span class="string">                var b=2;</span>
+<span class="string">                document.write('这是3--'+b+'&lt;br&gt;');   </span>
+<span class="string">                bb();</span>
+<span class="string">                function bb(){</span>
+<span class="string">                    document.write('这是4--'+b+'&lt;br&gt;');</span>
+<span class="string">                    b=3;</span>
+<span class="string">                    document.write('这是5--'+b+'&lt;br&gt;');</span>
+<span class="string">                }</span>
+<span class="string">            }</span>
+<span class="string">            输出:</span>
+<span class="string">                这是2--undefined</span>
+<span class="string">                这是3--2</span>
+<span class="string">                这是4--2</span>
+<span class="string">                这是5--3</span>
+<span class="string">                这是1--1</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">##  let</span>
+<span class="string">    document.write('这是--'+a+'&lt;br&gt;');</span>
+<span class="string">    {</span>
+<span class="string">        var a=1;</span>
+<span class="string">        let b=2;</span>
+<span class="string">    }</span>
+<span class="string">    document.write('这是--'+a+'&lt;br&gt;');</span>
+<span class="string">    //输出：</span>
+<span class="string">    这是--undefined</span>
+<span class="string">    这是--1</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"># ★内置顶层函数★</span>
+<span class="string">*    顶层函数:拥有全局作用域的</span>
+<span class="string">*    内置:直接调用,不用声明</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"># ★数据类型转换★</span>
+<span class="string">1.Number() 转换成数值类型</span>
+<span class="string">2.String() 转换成字符串类型</span>
+<span class="string">3.Boolean() 转换成布尔类型</span>
+<span class="string">4.parseInt() 将字符串转换为整型</span>
+<span class="string">5.parseFloat() 转换为浮点型</span>
+<span class="string"></span>
+<span class="string">#####// Number 转换成数值类型            </span>
+<span class="string">    //    E.如果是字符串        </span>
+<span class="string">    //    1.如果字符串当中只有数字，转换为10进制(忽略前导0和后导0)</span>
+<span class="string">    //    2.如果是有效的规范的浮点型，转换为浮点值(忽略前导0和后导0) </span>
+<span class="string">    //    3.如果是空字符串，则转换为0    </span>
+<span class="string">    //    4.如果是其他的值，返回NaN</span>
+<span class="string">    document.write(Number(012)+'&lt;br&gt;');            //    10        八进制</span>
+<span class="string">    document.write(Number('012ABC')+'&lt;br&gt;');    //    NaN  </span>
+<span class="string">    document.write(Number('012')+'&lt;br&gt;');        //  12        数字,转换成为本身,无意义的后导0去掉</span>
+<span class="string">    document.write(Number('1234.000')+'&lt;br&gt;');    //    1234</span>
+<span class="string">    document.write(Number(' ')+'&lt;br&gt;');            //    0        null转换为0</span>
+<span class="string">    document.write(Number('1.2.3 ')+'&lt;br&gt;');    //  NaN</span>
+<span class="string">    document.write(Number('a2333')+'&lt;br&gt;');        //  NaN</span>
+<span class="string">    document.write(Number('undefined')+'&lt;br&gt;&lt;br&gt;');    //    NaNundefined 转换为 NaN</span>
+<span class="string"></span>
+<span class="string">#####// String  将任何的类型转换为字符串     加了个引号     </span>
+<span class="string">    //布尔类型:会返回true 和false        </span>
+<span class="string">    // 数值类型:本身的字符串                </span>
+<span class="string">    document.write(String('123')+'&lt;br&gt;');   //  123</span>
+<span class="string">    document.write(String('a2333')+'&lt;br&gt;');   //a2333</span>
+<span class="string">    document.write(String(undefined)+'&lt;br&gt;');</span>
+<span class="string">    document.write(String(null)+'&lt;br&gt;&lt;br&gt;');</span>
+<span class="string"></span>
+<span class="string">##### 布尔值   Boolean</span>
+<span class="string">    document.write(Boolean(null)+'&lt;br&gt;&lt;br&gt;');   //真假  false  true</span>
+<span class="string">    //  ''  0  NaN   undefined   false  null     转化为假   其他都为真</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">##### 判断能否转换为数值类型        isNaN</span>
+<span class="string">    //    如果能转换成数值返回假，不能转换成数值类型，返回真</span>
+<span class="string">    document.write(isNaN(true)+'&lt;br&gt;');         //false</span>
+<span class="string">    document.write(isNaN('ABCD')+'&lt;br&gt;&lt;br&gt;');   //true</span>
+<span class="string"></span>
+<span class="string">#####//将字符串转换为整数    parseInt</span>
+<span class="string">    //A.如果一个字符串只包含数字，则以10进制的方式转换为整型</span>
+<span class="string">    //  开头必须是数字、空格</span>
+<span class="string">    document.write(parseInt('123hjk321')+'&lt;br&gt;');   //转换为数值类型   123</span>
+<span class="string">    document.write(parseInt('defau32')+'&lt;br&gt;');         //NaN</span>
+<span class="string">    document.write(parseInt(100,2)+'&lt;br&gt;');         //2进制  4</span>
+<span class="string">    document.write(parseInt(100,8)+'&lt;br&gt;&lt;br&gt;');         //8进制  64</span>
+<span class="string">    var str="</span>0x11<span class="string">";</span>
+<span class="string">    alert(parseInt(str));   //弹出17    进制解析</span>
+<span class="string"></span>
+<span class="string">#####// 将字符串转换为浮点数   parseFloat</span>
+<span class="string">    //A.字符串当中的 . 只有第一个有效，其他的都是无效的。</span>
+<span class="string">    //B.如果字符串是一个有效的整数，他返回的是整数，不会返回浮点数。</span>
+<span class="string">    document.write(parseFloat('1.2.3')+'&lt;br&gt;');</span>
+<span class="string">    document.write(parseFloat('123acb'));</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">##练习：</span>
+<span class="string">##### 表格</span>
+<span class="string">    function table(){</span>
+<span class="string">        document.write('&lt;table border=1 bgcolor=blue&gt;');</span>
+<span class="string">        for(var i=0;i&lt;6;i++){</span>
+<span class="string">            document.write('&lt;tr&gt;');</span>
+<span class="string">            for(var j=0;j&lt;6;j++){</span>
+<span class="string">                document.write('&lt;td&gt;');</span>
+<span class="string">                document.write(j);</span>
+<span class="string">                document.write('&lt;/td&gt;');</span>
+<span class="string">            }</span>
+<span class="string">            document.write('&lt;/tr&gt;');</span>
+<span class="string">        }</span>
+<span class="string">        document.write('&lt;/table&gt;')</span>
+<span class="string">    }</span>
+<span class="string">    table();</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">## ★0424★★★★★函数-隐式类型转换★★★★★★★</span>
+<span class="string">*     1.运算符</span>
+<span class="string"></span>
+<span class="string">    +    `- * / %`如果操作数不是数值，将会隐式的调用Number()函数，按    照这个函数的转换规则进行转换.</span>
+<span class="string">    +    如果转换不成功，整个表达式返回NaN</span>
+<span class="string">    +    `+`    如果操作数都是数值，然后进行相加任何数据类型和字符串相加，然后返回他们拼接的结果。</span>
+<span class="string">    +    如果操作数都布尔值，那么进行Number()转换，false为0，true为1，进行相加</span>
+<span class="string"></span>
+<span class="string">###### eg:</span>
+<span class="string">    //     var num='5';</span>
+<span class="string">    var num='5px'</span>
+<span class="string">    var num1=10;</span>
+<span class="string">    document.write(num-num1+'&lt;br&gt;'); //输出NaN</span>
+<span class="string"></span>
+<span class="string">    var num='null'</span>
+<span class="string">    var num1=10;</span>
+<span class="string">    document.write(num-num1+'&lt;br&gt;'); //输出NaN</span>
+<span class="string"></span>
+<span class="string">    var num=null;</span>
+<span class="string">    var num1=10;</span>
+<span class="string">    document.write(num-num1+'&lt;br&gt;'); //输出-10</span>
+<span class="string"></span>
+<span class="string">    var num=true;</span>
+<span class="string">    var num1=10;</span>
+<span class="string">    document.write(num-num1+'&lt;br&gt;'); //输出-9</span>
+<span class="string"></span>
+<span class="string">    var num='true';</span>
+<span class="string">    var num1=10;</span>
+<span class="string">    document.write(num-num1+'&lt;br&gt;'); //输出NaN</span>
+<span class="string"></span>
+<span class="string">    document.write(+0 == -0);//输出true</span>
+<span class="string">    document.write('&lt;br&gt;');</span>
+<span class="string">    document.write(NaN == NaN);//输出false</span>
+<span class="string">    document.write('&lt;br&gt;');</span>
+<span class="string">    document.write(true == 1);//输出true</span>
+<span class="string">    document.write('&lt;br&gt;');</span>
+<span class="string"></span>
+<span class="string">## let</span>
+<span class="string">*    不能重复定义</span>
+<span class="string">*    作用范围</span>
+<span class="string">*    嵌套</span>
+<span class="string">    {</span>
+<span class="string">        let a=10;</span>
+<span class="string">        {</span>
+<span class="string">            let a=20;</span>
+<span class="string">            console.log(a);</span>
+<span class="string">        }</span>
+<span class="string">        console.log(a);</span>
+<span class="string">    }</span>
+<span class="string">*    不存在变量提升，先声明后调用</span>
+<span class="string">*    暂时性死区   tdz</span>
+<span class="string">+    function aa(y=x,x=2){}</span>
+<span class="string">+    function aa(x=x){}</span>
+<span class="string">+    形参不能用let重新声明</span>
+<span class="string">#####    块级作用域</span>
+<span class="string">        {    }</span>
+<span class="string">    let=b</span>
+<span class="string">    let 允许重新赋值,但不能重新声明,会报错.</span>
+<span class="string">    let 只在块儿中起作用</span>
+<span class="string"></span>
+<span class="string">    {</span>
+<span class="string">        var a=10;</span>
+<span class="string">        let b=20;//只在块儿中起作用</span>
+<span class="string">    //    document.write(b);</span>
+<span class="string">    }//大括号--代码块</span>
+<span class="string">    document.write(a);//在括号里一样</span>
+<span class="string">    document.write(b);//无法输出，报错。只在块儿中起作用</span>
+<span class="string"></span>
+<span class="string">    function aa(num){</span>
+<span class="string">        //let num=20;//报错   num已经声明，不能重新声明</span>
+<span class="string">        num=20;//正确</span>
+<span class="string">        document.write(num);</span>
+<span class="string">    }</span>
+<span class="string">    aa();</span>
+<span class="string"></span>
+<span class="string">#####  不合理</span>
+<span class="string">*    变量提升</span>
+<span class="string">*    for循环下标i泄露</span>
+<span class="string">*    let 记录当前循环下表 i</span>
+<span class="string">-    for</span>
+<span class="string">    ????????????????????????????????????????????????????????????????</span>
+<span class="string">######变量的提升</span>
+<span class="string">            {</span>
+<span class="string">    //temporal dead zone 暂时性死区</span>
+<span class="string">                document.write(a);//not defined    暂时性死区</span>
+<span class="string">          //        var a=1;</span>
+<span class="string">                let a=10;</span>
+<span class="string">                document.write(a);</span>
+<span class="string">            }</span>
+<span class="string"></span>
+<span class="string">    *隐式性的暂时性死区</span>
+<span class="string">    function aa(z=z){</span>
+<span class="string">        num=20;</span>
+<span class="string">        document.write(z);</span>
+<span class="string">    }</span>
+<span class="string">    aa();//会报错</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">    let a='a';</span>
+<span class="string">    {</span>
+<span class="string">        let a=10;</span>
+<span class="string">        {</span>
+<span class="string">            let a=20;</span>
+<span class="string">            document.write(a);    //20</span>
+<span class="string">        }</span>
+<span class="string">        document.write(a);        //10</span>
+<span class="string">    }</span>
+<span class="string">    document.write(a);            //a</span>
+<span class="string"></span>
+<span class="string">#####    for循环下标i泄露</span>
+<span class="string">    * let</span>
+<span class="string">    var arr=[];</span>
+<span class="string">    for(var i=0;i&lt;10;i++){</span>
+<span class="string">        arr[i]=function(){</span>
+<span class="string">            document.write(i);</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    arr[6]();    // var 声明 输出10。执行调用的时候，for循环已经跑完了，所以为10.</span>
+<span class="string">                //     let声明 输出6</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">    var arr=[];</span>
+<span class="string">    for(let i=0;i&lt;10;i++){</span>
+<span class="string">        arr[i]=function(){</span>
+<span class="string">            document.write(i);</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    arr[0]();   //输出0  for循环每次循环都会记录下.</span>
+<span class="string">    arr[3]();     //3        存下了i的值</span>
+<span class="string">    arr[6]();     //6</span>
+<span class="string">    arr[8]();     //8</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">    function aa(z=y,y=x){</span>
+<span class="string">        document.write(z,y);</span>
+<span class="string">    }</span>
+<span class="string">    aa(1,2);//输出  1  2</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">##    隐式数据类型转换</span>
+<span class="string">    四则元算</span>
+<span class="string">    关系运算符</span>
+<span class="string">    逻辑</span>
+<span class="string">    语句</span>
+<span class="string">    if()</span>
+<span class="string">    while()</span>
+<span class="string">    boolean espression?真：假；</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"># ★★★★★★★★★★★★★对象★★★★★★★★★★★★★★★★★★★</span>
+<span class="string">*    属性和方法的无序集合体 当属性值为函数的时候 我们把这个属性称为对象的方法</span>
+<span class="string">*    instanceof  判断是否为对象     alert(</span>
+<span class="string">*    one instanceof Object);</span>
+<span class="string">#####  声明对象</span>
+<span class="string">    class里是在constructor里写this，function里是直接写.</span>
+<span class="string">    可以加 person.prototype={  } 和json的写法相同。</span>
+<span class="string"></span>
+<span class="string">        1.类名的方式</span>
+<span class="string">        class person{    };</span>
+<span class="string">        var zhangsan=new person();</span>
+<span class="string"></span>
+<span class="string">        2.Json</span>
+<span class="string">        var 变量={属性名/属性值/方法(属性值为函数)}</span>
+<span class="string">        var zhangsan={};</span>
+<span class="string">        console.log(apple.tv == sanxing.tv);</span>
+<span class="string">        //false  tv是函数。两个函数比较时，比较的是地址，地址不同，所以是false</span>
+<span class="string">        console.log(apple.name == sanxing.name);//true</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">        3.构造函数</span>
+<span class="string">        function person(){    }</span>
+<span class="string">        var someone=new person();</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">        4. 内置顶层函数   new</span>
+<span class="string">        var someone3 = new Object();</span>
+<span class="string">        someone3.name='zhangsan';</span>
+<span class="string">        someone3.age=17;</span>
+<span class="string">        someone3.sex='man';</span>
+<span class="string">        someone3.say=function(){</span>
+<span class="string">            alert("</span>shuohua<span class="string">")</span>
+<span class="string">        }</span>
+<span class="string">        someone3;</span>
+<span class="string"></span>
+<span class="string">#### 3.类</span>
+<span class="string">    具有相同或者相似属性的对象的抽象描述就是类</span>
+<span class="string">*    类的具体化（实例化）就是对象</span>
+<span class="string">*    在javascript当中是通过构造函数来体现类的特性的</span>
+<span class="string"></span>
+<span class="string">#### 4.实例化</span>
+<span class="string">    由一个抽象的概念得到具体的事物的过程</span>
+<span class="string">*    通过new构造函数</span>
+<span class="string"></span>
+<span class="string">*    1.使用JOSN方式JavaScript的原生对象描述法</span>
+<span class="string">*    2.实例化构造函数</span>
+<span class="string">*    3.内置顶层函数</span>
+<span class="string"></span>
+<span class="string">###### eg:</span>
+<span class="string">    1.类名的方式</span>
+<span class="string">    class里面属性、方法删不掉。</span>
+<span class="string">    class person{</span>
+<span class="string">        constructor(){  //属性值        构造函数</span>
+<span class="string">            this.age=18;</span>
+<span class="string">            this.name='lisi';</span>
+<span class="string">            this.drink1=function(){</span>
+<span class="string">                alert("</span>干杯<span class="string">");</span>
+<span class="string">            }</span>
+<span class="string">        }</span>
+<span class="string">        play(){</span>
+<span class="string">            alert('这是方法');</span>
+<span class="string">        }</span>
+<span class="string">        study(){</span>
+<span class="string">            alert('学习的方法');</span>
+<span class="string">        }</span>
+<span class="string">    };</span>
+<span class="string">    let zhangsan=new person();</span>
+<span class="string">    zhangsan.tall='180cm';</span>
+<span class="string">    zhangsan.drink=function(){</span>
+<span class="string">        alert('喝酒伤身');</span>
+<span class="string">    }</span>
+<span class="string">    console.dir(zhangsan);</span>
+<span class="string">    console.log(zhangsan.tall);</span>
+<span class="string">    zhangsan.play();</span>
+<span class="string">    zhangsan.drink();</span>
+<span class="string">    zhangsan.drink1();</span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">    2.Json方式</span>
+<span class="string">    let apple={</span>
+<span class="string">            brand:'apple',    //注意此地的逗号</span>
+<span class="string">            color:'red',</span>
+<span class="string">            size:750,</span>
+<span class="string">            call:function(){</span>
+<span class="string">                alert('打电话');</span>
+<span class="string">            }</span>
+<span class="string">        };</span>
+<span class="string">        apple.price=6500;</span>
+<span class="string">        console.dir(apple);</span>
+<span class="string">        console.log(apple.price);</span>
+<span class="string">        apple.call();</span>
+<span class="string"></span>
+<span class="string">    3.构造函数方式</span>
+<span class="string">    function person(name,age,tall,say){</span>
+<span class="string">        this.name=name;</span>
+<span class="string">        this.age=age;</span>
+<span class="string">        this.tall=tall;</span>
+<span class="string">        this.say=function(){</span>
+<span class="string">            alert('shuohua');</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    person.prototype={  //原型对象</span>
+<span class="string">        tizhong:180,</span>
+<span class="string">        play(){</span>
+<span class="string">            alert('玩儿');</span>
+<span class="string">        }</span>
+<span class="string">    }</span>
+<span class="string">    var someone=new person();</span>
+<span class="string">    console.log(someone.tizhong);</span>
+<span class="string">    someone.play();</span>
+<span class="string"></span>
+<span class="string">3.编写一个构造函数，并通过new方式来创建对象，构造函数本可以带有构造参数 </span>
+<span class="string">    例如： </span>
+<span class="string">    function User(name,age){ </span>
+<span class="string">        this.name=name; </span>
+<span class="string">        this.age=age; </span>
+<span class="string">        this.canFly=false; </span>
+<span class="string">    } </span>
+<span class="string">var use=new User(); </span>
+<span class="string"></span>
+<span class="string"></span>
+<span class="string">#####访问 :</span>
+<span class="string">    访问属性+方法</span>
+<span class="string">    访问值.属性</span>
+<span class="string">    访问值["</span>属性<span class="string">"]</span>
+<span class="string">    仿问值.属性</span>
+<span class="string">    仿问值["</span>属性<span class="string">"]();</span>
+<span class="string"></span>
+<span class="string">    alert(apple.name);</span>
+<span class="string">    alert(apple['name']);   //括号当中必须是字符串</span>
+<span class="string">    apple.message();</span>
+<span class="string">    apple['message']();   //</span>
+<span class="string"></span>
+<span class="string">#####遍历</span>
+<span class="string">        for(let i in apple){</span>
+<span class="string">            console.log(`属性<span class="variable">${i}</span>---<span class="variable">${apple[i]}</span>`);</span>
+<span class="string">    //        console.log(someone2[i]);//访问单个</span>
+<span class="string">        }</span>
+<span class="string"></span>
+<span class="string">#####删除</span>
+<span class="string">           json属性删除后是undefined</span>
+<span class="string">    delete someone2.name;</span>
+<span class="string"></span>
+<span class="string">#####清空</span>
+<span class="string">    someone2=null;</span>
+</code></pre>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:github.com/liujiang135/blog.git">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/08/07/008_Fullpage 笔记/">008- Fullpage</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/007_vue/">007- VUE</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/006_nodeJs/">006- nodeJS</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/005_react/">005-react</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/004_PHP笔记/">004_PHP</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 Jiang
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

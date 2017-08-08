@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>006- nodeJS | Jiang</title>
+  <meta name="author" content="Jiang" />
+
+  
+  <meta name="description" content="nodeJS123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="006- nodeJS" />
+  <meta property="og:site_name" content="Jiang" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Jiang" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Jiang</a></h1>
+  <h2><a href="/">I am a computer programmer</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-08-07T15:26:14.324Z"><a href="/2017/08/07/006_nodeJs/">006- nodeJS</a></time>
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="nodeJS"><a href="#nodeJS" class="headerlink" title="nodeJS"></a>nodeJS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">###网址：         webpack.js.org</span></div><div class="line">解决问题网址：  https://stackoverflow.com/</div><div class="line"></div><div class="line">Buffer 是ES6新引入的数据类型</div><div class="line"></div><div class="line">// Buffer 需要 先转成string</div><div class="line">   Buffer通过toString()转成字符串</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">###★技巧★   explorer .   可以打开当前文件夹</span></div><div class="line"></div><div class="line">打开浏览器：</div><div class="line">child.spawnSync(<span class="string">'explorer'</span>, [])  数组</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">###★技巧★   编辑器 let  箭头函数 报错</span></div><div class="line">在设置中改为 ES6</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">### 基础知识   运行环境</span></div><div class="line">1.Node.js 是一个基于 Chrome V8 引擎的 JavaScript `运行环境`。 </div><div class="line">2.在 控制台 cmd中运行。是一种环境。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#######  1.   处理文件   node-module     ###############################</span></div><div class="line">const os =require(<span class="string">'os'</span>);  //  operation system 操作系统</div><div class="line">const fs =require(<span class="string">'fs'</span>);  //   file system  文件系统</div><div class="line">const path =require(<span class="string">'path'</span>);    //  path</div><div class="line"></div><div class="line">const base =path.join(os.join(os.homdir(),<span class="string">'Desktop'</span>));    //用户目录</div><div class="line"><span class="keyword">for</span>(var i =0;i&lt;100;i++)&#123;</div><div class="line">    fs.mkdirSync(path.join(base,String(Math.random())))</div><div class="line">&#125;</div><div class="line"></div><div class="line">//make directory sync 创建一个 目录</div><div class="line">//path.join 是连接路径</div><div class="line"></div><div class="line"><span class="comment">#######   下载request</span></div><div class="line">npm install request</div><div class="line">npm install cheerio</div><div class="line">安装自动监测自动运行程序</div><div class="line">npm install -g nodemon</div><div class="line">npm node package manager</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#######   运行  node index.js 执行程序</span></div><div class="line"><span class="comment">#######  安装自动监测后  nodemon index.js 执行程序</span></div><div class="line"></div><div class="line"><span class="comment">#######     2.    发起网络请求</span></div><div class="line"></div><div class="line">const request = require(<span class="string">'request'</span>);</div><div class="line">const cheerio = require(<span class="string">'cheerio'</span>);</div><div class="line">request.get(<span class="string">'http://www.baidu.com'</span>, (err, response, body) =&gt; &#123;</div><div class="line">    var $ = cheerio.load(body.toString());</div><div class="line">var imgUrl = <span class="string">'https:'</span> + $(<span class="string">'#lg'</span>).find(<span class="string">'img'</span>).attr(<span class="string">'src'</span>);</div><div class="line">//buffer stream</div><div class="line">request.get(imgUrl).pipe(</div><div class="line">    fs.createWriteStream(</div><div class="line">        path.join(__dirname, <span class="string">'baidu-logo.png'</span>)</div><div class="line">    )</div><div class="line">)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">//随口说出五个   request   cheerio  ...</div><div class="line"></div><div class="line"><span class="comment">#######   3.创建自己的node_modules 文件</span></div><div class="line">建一个文件夹 eg:  get-bing-pic</div><div class="line">控制台   npm init   --&gt;  创建 package.json</div><div class="line">一直回车</div><div class="line"></div><div class="line"></div><div class="line">npm publish   //npm 发布</div><div class="line"></div><div class="line">path.resolve(<span class="string">'./'</span>+<span class="string">'asd'</span>+jpg<span class="string">')</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">npmjs 发布前要像搜索一下，不能发重复的</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">###         npm官网上传文件</span></div><div class="line"><span class="string">node内建文件夹</span></div><div class="line"><span class="string">cd +文件夹名</span></div><div class="line"><span class="string">js中添加： #!/usr/bin/env node</span></div><div class="line"><span class="string">npm init（一直回车） --》  创建packjson.json</span></div><div class="line"><span class="string">npm install request --save</span></div><div class="line"><span class="string">在node下创建index.js</span></div><div class="line"><span class="string">index.js内编写此代码：</span></div><div class="line"><span class="string">const request = require('</span>request<span class="string">');</span></div><div class="line"><span class="string">const path = require('</span>path<span class="string">');</span></div><div class="line"><span class="string">const fs = require('</span>fs<span class="string">');</span></div><div class="line"><span class="string">var getpic = (fn) =&gt; &#123;</span></div><div class="line"><span class="string">    request.get('</span>https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;nc=1500903673140&amp;pid=hp<span class="string">', (err, response, body) =&gt; &#123;</span></div><div class="line"><span class="string">        var url = JSON.parse(body.toString()).images[0].url;</span></div><div class="line"><span class="string">        var name = JSON.parse(body.toString()).images[0].enddate;</span></div><div class="line"><span class="string">        request.get('</span>http://cn.bing.com/<span class="string">' + url).pipe(</span></div><div class="line"><span class="string">            fs.createWriteStream(path.resolve('</span>./<span class="string">' + name + '</span>.jpg<span class="string">'))</span></div><div class="line"><span class="string">        )</span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string">&#125;;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">module.exports = getpic;</span></div><div class="line"><span class="string">本地运行成功后可将node_modules文件夹和已下载的图片删除</span></div><div class="line"><span class="string">npm adduser</span></div><div class="line"><span class="string">npm publish</span></div><div class="line"><span class="string">修改后，记得修改版本号再重新上传</span></div><div class="line"><span class="string">package.json:    "version": "1.0.1",   `名字不能和网上的重复`</span></div><div class="line"><span class="string">npm publish</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">#################    20170725  global  #####################</span></div><div class="line"><span class="string">异步函数</span></div><div class="line"><span class="string">回调函数</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">项目工作流程</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">###################  做自己的小程序   ##############</span></div><div class="line"><span class="string">在package.json里添加：  </span></div><div class="line"><span class="string">"bin":&#123;</span></div><div class="line"><span class="string">    "download-pic-l":"index.js"</span></div><div class="line"><span class="string">&#125;,</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">下载:</span></div><div class="line"><span class="string">npm install request --save</span></div><div class="line"><span class="string">npm install cheerio --save</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">下载并安装：npm install -g download-pic-l</span></div><div class="line"><span class="string">运行：download-pic-l -t www.qq.com</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">去重: SET</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">###################     003 Os&amp;Path&amp;QueryString&amp;Url&amp;Child Propcess   ############E#############</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">设置中打开language --&gt; Node.js and NPM --&gt; enable打开</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">#################   npm install mysql --save   ##################</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">安装 express</span></div><div class="line"><span class="string">#################   npm install express --save   ##################</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">npm run build</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">获取数据库：</span></div><div class="line"><span class="string">1. 截取前端的代码（react生成的build中的static），放入static中。</span></div><div class="line"><span class="string">2.  修改以前的路径  2.修改 /20170713/react/index.php/   改为  /</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">nodejs  v4.4.4    git</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">修改json,把要用到的下载的插件及编号，添加进去</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">nodejsnews</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">package.json的内容：</span></div><div class="line"><span class="string">dependencies</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">把  '</span>/<span class="string">'   放在最后</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">【1】准备：</span></div><div class="line"><span class="string">1.把自己的index.js--&gt;重命名为--&gt;server.js。</span></div><div class="line"><span class="string">2.package.json中修改为start:node server.js</span></div><div class="line"><span class="string">3.所有js的第一行添加 '</span>use strict<span class="string">'。 【因为用到了ES6】</span></div><div class="line"><span class="string">4.index.html 页面中，不需要/public，直接/static就行。</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">【2】上传：</span></div><div class="line"><span class="string">1.git clone </span></div><div class="line"><span class="string">2.cd 进去</span></div><div class="line"><span class="string">3.把他的server.js用自己的替换掉（保留原有的 port = 10808 端口）</span></div><div class="line"><span class="string">4.把自己的dependencies的东西放进他的里面。</span></div><div class="line"><span class="string">5.把数据库所有的东西（名字、链接、）要换掉</span></div><div class="line"><span class="string">6.上传</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">#################   webpack   ##################</span></div><div class="line"><span class="string">###网址：         webpack.js.org</span></div><div class="line"><span class="string">在webpack.js上、github上、npmjs上搜</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">npm install -g    </span></div><div class="line"><span class="string">//-g  是安装到全局</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">documentation 配置</span></div><div class="line"><span class="string">guides          向导</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">1.【配置】:</span></div><div class="line"><span class="string">npm install -g webpack   </span></div><div class="line"><span class="string">npm install -g webpack-dev-server</span></div><div class="line"><span class="string">npm install webpack --save</span></div><div class="line"><span class="string">npm install webpack-dev-server --save</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">###   示例</span></div><div class="line"><span class="string">  </span></div><div class="line"><span class="string">src/a.js:</span></div><div class="line"><span class="string">`var str = '</span>hello<span class="string">';</span></div><div class="line"><span class="string"> export default str;`</span></div><div class="line"><span class="string">src/b.js:</span></div><div class="line"><span class="string">`import cc from '</span>./a.js<span class="string">';</span></div><div class="line"><span class="string"> alert(cc);</span></div><div class="line"><span class="string">`</span></div><div class="line"><span class="string">cmd中执行: `webpack src/b.js js/dist.js`</span></div><div class="line"><span class="string">html中引入 `&lt;script src="js/dist.js"&gt;&lt;/script&gt;`</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">再写 </span></div><div class="line"><span class="string">`webpack-config.js`</span></div><div class="line"><span class="string"> 执行`webpack -w`</span></div><div class="line"><span class="string"> </span></div><div class="line"><span class="string"> loader --&gt; module</span></div><div class="line"><span class="string"> </span></div><div class="line"><span class="string"> 【配置】:</span></div><div class="line"><span class="string">npm install node-sass --save</span></div><div class="line"><span class="string">npm install style-loader --save</span></div><div class="line"><span class="string">npm install css-loader --save</span></div><div class="line"><span class="string">npm install sass-loader --save</span></div><div class="line"><span class="string">npm install file-loader --save</span></div><div class="line"><span class="string">npm install url-loader --save</span></div><div class="line"><span class="string">npm install html-webpack-plugin --save</span></div><div class="line"><span class="string">npm install clean-webpack-plugin --save</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">webpack.config.js升级后</span></div><div class="line"><span class="string">运行 · webpack -w · 执行【监测src中的变化来编译】</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">############     利用webpack将antd中需要的组件抽出来    ###########</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">inline-source</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">执行：</span></div><div class="line"><span class="string">webpack-dev-server --open</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">npm start</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">###  需要在设置中关掉  safe write</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">【配置】:</span></div><div class="line"><span class="string">npm install react --save</span></div><div class="line"><span class="string">npm install react-dom --save</span></div><div class="line"><span class="string">npm install babel-loader --save</span></div><div class="line"><span class="string">npm install babel-core --save</span></div><div class="line"><span class="string">npm install babel-preset-es2015 --save</span></div><div class="line"><span class="string">npm install babel-preset-react --save</span></div><div class="line"><span class="string">npm install antd --save</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">tree</span></div><div class="line"><span class="string">react官网复制代码</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">nate-river的配置信息</span></div><div class="line"><span class="string">new webpack.DefinePlugin(&#123;</span></div><div class="line"><span class="string">            '</span>process.env<span class="string">': &#123;</span></div><div class="line"><span class="string">                '</span>NODE_ENV<span class="string">': JSON.stringify('</span>production<span class="string">')</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;),</span></div><div class="line"><span class="string">        new webpack.optimize.UglifyJsPlugin(&#123;</span></div><div class="line"><span class="string">            compress: &#123;</span></div><div class="line"><span class="string">                warnings: false</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;),</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:github.com/liujiang135/blog.git">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/08/07/008_Fullpage 笔记/">008- Fullpage</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/007_vue/">007- VUE</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/006_nodeJs/">006- nodeJS</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/005_react/">005-react</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/004_PHP笔记/">004_PHP</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 Jiang
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

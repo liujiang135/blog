@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>express web开发常用代码 | Jiang</title>
+  <meta name="author" content="Jiang" />
+
+  
+  <meta name="description" content="处理普通post请求12345678const bodyParser = require(&#39;body-parser&#39;);// parse application/x-www-form-urlencodedapp.use(bodyParser.urlencoded(&amp;#123;extended: fa" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="express web开发常用代码" />
+  <meta property="og:site_name" content="Jiang" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Jiang" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Jiang</a></h1>
+  <h2><a href="/">I am a computer programmer</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-08-06T16:11:45.098Z"><a href="/2017/08/07/009_express web开发常用代码/">express web开发常用代码</a></time>
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="处理普通post请求"><a href="#处理普通post请求" class="headerlink" title="处理普通post请求"></a>处理普通post请求</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">const bodyParser = require(<span class="string">'body-parser'</span>);</div><div class="line">// parse application/x-www-form-urlencoded</div><div class="line">app.use(bodyParser.urlencoded(&#123;extended: <span class="literal">false</span>&#125;));</div><div class="line">// parse application/json</div><div class="line">app.use(bodyParser.json());</div><div class="line">app.post(<span class="string">'/'</span>,(req,res)=&gt;&#123;</div><div class="line">  console.log(req.body);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="处理session"><a href="#处理session" class="headerlink" title="处理session"></a>处理session</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">const session = require(<span class="string">'express-session'</span>);</div><div class="line"> app.use(session(&#123;</div><div class="line">   secret: <span class="string">'keyboard cat'</span>,</div><div class="line">   resave: <span class="literal">false</span>,</div><div class="line">   saveUninitialized: <span class="literal">true</span></div><div class="line"> &#125;));</div><div class="line"> app.get(<span class="string">'/logincheck'</span>,(req,res)=&gt;&#123;</div><div class="line">   req.session.login = <span class="literal">true</span>;</div><div class="line"> &#125;)</div><div class="line"> // 中间件</div><div class="line"> app.use(<span class="string">'/admin'</span>,(req,res,next)=&gt;&#123;</div><div class="line">   <span class="keyword">if</span>(req.seesion.login)&#123;</div><div class="line">     next();</div><div class="line">   &#125;<span class="keyword">else</span>&#123;</div><div class="line">     res.redirct(<span class="string">'/login'</span>);</div><div class="line">   &#125;</div><div class="line"> &#125;)</div></pre></td></tr></table></figure>
+<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">const fs = require(<span class="string">'fs'</span>);</div><div class="line"> const async = require(<span class="string">'async'</span>);</div><div class="line"> const multer = require(<span class="string">'multer'</span>);</div><div class="line"> const upload = multer(&#123;dest: <span class="string">'uploads/'</span>&#125;);</div><div class="line"> app.post(<span class="string">'/upload'</span>, upload.single(<span class="string">'wangEditorH5File'</span>), <span class="keyword">function</span> (req, res) &#123;</div><div class="line">   async.series([</div><div class="line">     <span class="keyword">function</span> (callback) &#123;</div><div class="line">       fs.createReadStream(req.file.path).pipe(fs.createWriteStream(<span class="string">'public/imgs/'</span> + req.file.originalname));</div><div class="line">       callback(null);</div><div class="line">     &#125;,</div><div class="line">     <span class="keyword">function</span> (callback) &#123;</div><div class="line">       fs.unlink(path.resolve(req.file.path));</div><div class="line">       callback(null);</div><div class="line">     &#125;</div><div class="line">   ], <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">     res.end(<span class="string">'/imgs/'</span> + req.file.originalname);</div><div class="line">   &#125;);</div><div class="line"> &#125;);</div></pre></td></tr></table></figure>
+<h2 id="react富文本编辑器组件"><a href="#react富文本编辑器组件" class="headerlink" title="react富文本编辑器组件"></a>react富文本编辑器组件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line"> &lt;head&gt;</div><div class="line">   &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">   &lt;title&gt;Document&lt;/title&gt;</div><div class="line">   &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"/css/wangEditor.min.css"</span>&gt;</div><div class="line"> &lt;/head&gt;</div><div class="line"> &lt;body&gt;</div><div class="line"> &lt;div id=<span class="string">"page"</span>&gt;&lt;/div&gt;</div><div class="line"> &lt;script src=<span class="string">"js/jquery-2.2.1.js"</span>&gt;&lt;/script&gt;</div><div class="line"> &lt;script src=<span class="string">"js/wangEditor.js"</span>&gt;&lt;/script&gt;</div><div class="line"> &lt;script src=<span class="string">"/js/admin.js"</span>&gt;&lt;/script&gt;</div><div class="line"> &lt;/body&gt;</div><div class="line"> &lt;/html&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">const React = require(<span class="string">'react'</span>);</div><div class="line">const ReactDOM = require(<span class="string">'react-dom'</span>);</div><div class="line">class Editor extends React.Component &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.getContents = this.getContents.bind(this);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">componentDidMount</span></span>() &#123;</div><div class="line">    this.editor = new window.wangEditor(this.el);</div><div class="line">    this.editor.config.uploadImgUrl = <span class="string">'/upload'</span>;</div><div class="line">    this.editor.create();</div><div class="line">    // 初始化内容</div><div class="line">    this.editor.<span class="variable">$txt</span>.html(<span class="string">'&lt;div&gt;this is a a&lt;/div&gt;'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">getContents</span></span>() &#123;</div><div class="line">    console.log(this.editor.<span class="variable">$txt</span>.html());</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">    <span class="built_in">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;div contentEditable=<span class="string">"true"</span> style= ref=&#123;(el)=&gt;&#123;this.el = el&#125;&#125;&gt;&lt;/div&gt;</div><div class="line">        &lt;div onClick=&#123;this.getContents&#125;&gt;获取内容&lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(&lt;Editor/&gt;, document.querySelector(<span class="string">'#page'</span>));</div></pre></td></tr></table></figure>
+<h2 id="创建md5"><a href="#创建md5" class="headerlink" title="创建md5"></a>创建md5</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const crypto = require(<span class="string">'crypto'</span>);</div><div class="line">const <span class="built_in">hash</span> = crypto.createHash(<span class="string">'md5'</span>);</div><div class="line">hash.update(<span class="string">'123456'</span>);</div><div class="line">console.log(hash.digest(<span class="string">'hex'</span>));</div></pre></td></tr></table></figure>
+<h2 id="mysql封装"><a href="#mysql封装" class="headerlink" title="mysql封装"></a>mysql封装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">const mysql = require(<span class="string">'mysql'</span>);</div><div class="line">const pool = mysql.createPool(&#123;</div><div class="line">  connectionLimit: 1000,</div><div class="line">  host: <span class="string">'localhost'</span>,</div><div class="line">  user: <span class="string">'root'</span>,</div><div class="line">  password: <span class="string">'root'</span>,</div><div class="line">  database: <span class="string">'music'</span></div><div class="line">&#125;);</div><div class="line"><span class="keyword">function</span> query(sql, arr, fn) &#123;</div><div class="line">  pool.getConnection((err, con)=&gt; &#123;</div><div class="line">    con.query(sql, arr, (err, res)=&gt; &#123;</div><div class="line">      con.release();</div><div class="line">      fn(err, res);</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line">module.exports = &#123;</div><div class="line">  query: query</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="防止意外退出"><a href="#防止意外退出" class="headerlink" title="防止意外退出"></a>防止意外退出</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">process.on(<span class="string">'uncaughtException'</span>, (ex)=&gt; &#123;</div><div class="line">  console.log(<span class="string">'error'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="react项目中使用fetch"><a href="#react项目中使用fetch" class="headerlink" title="react项目中使用fetch"></a>react项目中使用fetch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// npm install whatwg-fetch --save</div><div class="line">// 在html页面中引入whatwg-fetch.js</div><div class="line"></div><div class="line">// fetch上传文件</div><div class="line">var input = document.querySelector(<span class="string">'input[type="file"]'</span>)</div><div class="line"></div><div class="line">var data = new FormData()</div><div class="line">data.append(<span class="string">'file'</span>, input.files[0])</div><div class="line">data.append(<span class="string">'user'</span>, <span class="string">'hubot'</span>)</div><div class="line"></div><div class="line">fetch(<span class="string">'/avatars'</span>, &#123;</div><div class="line">  method: <span class="string">'POST'</span>,</div><div class="line">  body: data</div><div class="line">&#125;)</div><div class="line">// fetch提交表单</div><div class="line">var form = document.querySelector(<span class="string">'form'</span>)</div><div class="line"></div><div class="line">fetch(<span class="string">'/users'</span>, &#123;</div><div class="line">  method: <span class="string">'POST'</span>,</div><div class="line">  body: new FormData(form)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:github.com/liujiang135/blog.git">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/08/07/008_Fullpage 笔记/">008- Fullpage</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/007_vue/">007- VUE</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/006_nodeJs/">006- nodeJS</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/005_react/">005-react</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/004_PHP笔记/">004_PHP</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 Jiang
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

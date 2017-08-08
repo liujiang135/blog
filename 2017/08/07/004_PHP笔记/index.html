@@ -1,0 +1,1354 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>004_PHP | Jiang</title>
+  <meta name="author" content="Jiang" />
+
+  
+  <meta name="description" content="PHP##   报错 
+ `git上传要写限制500M那个，要不页面不更新`
+
+www.wangeditor.com
+
+dataType: &#39;json&#39;,
+
+
+print_r($_SERVER);
+dump();
+echo();
+
+
+###  bootstript 的居中类名
+    contain" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="004_PHP" />
+  <meta property="og:site_name" content="Jiang" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Jiang" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Jiang</a></h1>
+  <h2><a href="/">I am a computer programmer</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-08-07T15:26:13.181Z"><a href="/2017/08/07/004_PHP笔记/">004_PHP</a></time>
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><pre><code class="bash"><span class="comment">##   报错 </span>
+ `git上传要写限制500M那个，要不页面不更新`
+
+www.wangeditor.com
+
+dataType: <span class="string">'json'</span>,
+
+
+print_r(<span class="variable">$_SERVER</span>);
+dump();
+<span class="built_in">echo</span>();
+
+
+<span class="comment">###  bootstript 的居中类名</span>
+    container
+
+<span class="comment">####  百度云上传的  bug</span>
+出不来页面：
+/view/
+改成APP/view/
+
+进了php的 <span class="keyword">function</span> <span class="function"><span class="title">index</span></span>(){ 中，print_r(123); 看一下，能不能出来123.}
+如果还是没有，看看 include <span class="string">'APP/view/gameadmin.html'</span>; 这几个字对了没，核对文件夹里，
+是不是 gameadmin  写成 Gameadmin 了 。一般只有这个错误
+
+
+如果出现404页面 是路径问题   大小写问题
+
+<span class="comment">###   解决 bug</span>
+//调试 ：  到处 用 <span class="built_in">echo</span> 查看，在 index.php 中，在 core 中，一步一步<span class="built_in">echo</span> ,看看到哪一步没有的
+//<span class="built_in">echo</span> 123;
+
+
+<span class="comment">####★技巧★   密码安全保障机制</span>
+md5()
+把任意长度的字符串 --&gt; 定长的字符串
+
+<span class="comment">####★技巧★   关闭input的默认弹框</span>
+    &lt;input autocomplete=<span class="string">"off"</span> placeholder=<span class="string">"歌手名"</span>&gt;
+
+    ajax 的值要用JS先从html中获取，再传给php，php处理数据库中，然后从php发回来再在JS处理显示在页面上
+
+<span class="comment">####★技巧★   进入页面后自动触发这个事件   刷新</span>
+$(window).trigger(<span class="string">'hashchange'</span>);
+
+页面跳转：
+location.href = location.pathname + <span class="string">'#list'</span>;
+
+<span class="comment">####★技巧★   浏览器 报错   </span>
+Parse error: syntax error, unexpected end of file <span class="keyword">in</span> D:already.html on line 109
+
+&lt;?php ?&gt;  书写错误
+<span class="built_in">echo</span>的结尾没加分号  ; 
+
+
+<span class="comment">####★技巧★   报错</span>
+ data = JSON.parse(data);
+
+    loadings(data);
+可能是调用函数没有传参  loadings();
+
+原因：data数据有问题
+ data: {name: nameEl, prive: priceEl, pic: picEl, num: numEl, cid: cidEl},
+中 price 写错
+
+
+<span class="comment">####★技巧★   选中复选框的值</span>
+$(<span class="string">'.radio:checked'</span>)
+`<span class="built_in">let</span> cidEl = $(<span class="string">'.radio:checked'</span>).val();`
+
+nameEl.val()
+
+<span class="comment">####★技巧★  console.table</span>
+    console.table
+
+
+<span class="comment">####★技巧★   修改 input 值，必须修改value。</span>
+&lt;input <span class="built_in">type</span>=<span class="string">"hidden"</span> name=<span class="string">'id'</span> class=<span class="string">"form-control"</span> id=<span class="string">"exampleInputEmail0"</span> placeholder=<span class="string">"&lt;?php echo <span class="variable">$data</span>['id'] ?&gt;"</span> value=<span class="string">"&lt;?php echo <span class="variable">$data</span>['id'] ?&gt;"</span>&gt;
+
+jquery 中 input 的值是：  nameEl.val()
+
+
+<span class="comment">####★技巧★  </span>
+localhostz就等于127.0.0.1
+192.168.3.166：8087    8087是端口号
+
+
+<span class="comment">####★技巧★   后台有哪些语言    </span>
+//JS python php node.js java .net
+`通过json()方式来链接`
+
+
+<span class="comment">####★技巧★  鼠标点击事件 默认增加</span>
+在 element 的 event listeners 下查看鼠标点击事件被注册越来越多次。
+当‘换一批’点击事件在length下时，每次length=3时，下边的on事件就多注册一次，所以会出现点击次数越多，注册越多的现象。
+
+1个汉子3个字节
+
+<span class="comment">####★技巧★    浏览器CSS改变后不更新</span>
+浏览器newwork勾上  <span class="built_in">disable</span> cache
+
+
+<span class="comment">####★技巧★    JS 引入   返回 从哪来到哪去</span>
+&lt;script src=<span class="string">"javascript:history.go(-1)"</span>&gt;返回&lt;/script&gt;
+&lt;a href=<span class="string">"javascript:history.go(-1)"</span>&gt;&lt;/a&gt;
+
+<span class="comment">####★技巧★     apache允许外网访问</span>
+在apache  的 httpd.conf  httpd-vhosts.conf  中都改为：
+<span class="comment">#   onlineoffline tag - don't remove</span>
+    Require all granted
+
+
+<span class="comment">####★技巧★  phpMyadmin  数据库注意数据类型 字段长度的选择</span>
+phpMyadmin --&gt; <span class="built_in">test</span> --&gt; news   5  --&gt;  id  INT / VARCHAR / text/mediumtext 字段长度不够  --》  保存
+
+<span class="comment">####★技巧★   跳转页面，修改网址  的方法</span>
+  JS   `location.href = $(<span class="string">'a'</span>)[0].getAttribute(<span class="string">'href'</span>)`
+&lt;p&gt;页面会在&lt;span&gt;5&lt;/span&gt;秒后跳转，如果没有，请&lt;a href=<span class="string">"&lt;?php echo <span class="variable">$url</span> ?&gt;"</span>&gt;点击跳转&lt;/a&gt;&lt;/p&gt;
+
+`include <span class="string">'../0614/jump.html'</span>;`
+`header(<span class="string">'Location:/0614/'</span>);`  //校验成功进入首页
+
+<span class="comment">####★技巧★  localhost 不能用解决方法：</span>
+
+localhost= 127.0.0.1=
+
+wamp用户名：root  
+密码： 空
+
+
+wamp版本太低，需要在5.5版本以上 
+PHP--&gt;version--&gt;get more 下载新版本
+
+<span class="comment">####★技巧★    webstorm  系统检测出问题</span>
+设置中 --&gt; Appearance &amp; Behavior --&gt; System Setting --&gt; Synchronization --&gt; 下边只留第一个的对勾 （后边为自动保存）
+
+mysql wampserver
+
+<span class="comment">####★技巧★ </span>
+用户看到的是图形
+浏览器看到的是对象
+JS看到的是字符串、代码
+
+
+<span class="comment">####★技巧★  滚动条  超出浏览器    scrollTop</span>
+$(window).scroll(<span class="function"><span class="title">function</span></span>(){
+    console.log($(document).scrollTop())
+})
+
+
+<span class="comment">####★技巧★</span>
+$(<span class="string">'li'</span>).css({color:<span class="string">'red'</span>})  
+中的 $(<span class="string">'li'</span>)  称为JQuery集合
+
+<span class="comment">####★技巧★ 赋值</span>
+程序运行第一步都在赋值
+
+
+<span class="comment">####★技巧★   网址   下载JQuery</span>
+www.bootcdn.cn
+
+<span class="comment">####★技巧★   JQuery兼容问题</span>
+从2.0开始不再兼容IE8，
+1.12以下可以兼容IE8.
+
+DOM   Document Object Model  文档对象模型
+
+<span class="comment">####★技巧★</span>
+控制台中  属性：  length:(...)  三个点是get <span class="built_in">set</span> 事件
+
+<span class="comment">####★技巧★  视口</span>
+    &lt;!--逻辑像素--&gt;
+    &lt;!--实际像素--&gt;
+    &lt;!--视口 一般手机浏览器的viewpoort = 980px --&gt;
+    &lt;!--  把手机浏览器的viewpoort改成手机的逻辑像素 --&gt;
+
+ &lt;!--   视口  手机的视口  不加 &lt;meat&gt;的时候像素是980px
+                             加&lt;meat&gt;
+    视口  手机里的浏览器 默认展示的大小--&gt;
+
+<span class="comment">####★技巧★</span>
+tabs[k].classList.remove(<span class="string">'active'</span>);
+navs[i].classList.add(<span class="string">'active'</span>);
+
+<span class="comment">####★技巧★</span>
+移动端  
+width:7.5rem   不要这样写
+
+默认
+*{
+    box-sizing:border-box;
+}
+
+优先使用   flex   100%   最后再选rem
+
+
+<span class="comment">####★技巧★   浏览器  报错！！！</span>
+代码修改，但浏览器没变（浏览器中的缓存还在）
+sourse    network    <span class="built_in">disable</span> cache  强制把缓存去掉
+
+<span class="comment">####★技巧★</span>
+在控制台 console 中输入  查看图片
+<span class="keyword">for</span>(<span class="built_in">let</span> i = 0;i&lt;document.images.length;i++){
+    console.log(document.images[i].src)
+}
+
+$(<span class="string">'h1'</span>)
+
+<span class="comment">####★技巧★   控制台的properties  是原型链</span>
+
+<span class="comment">####★技巧★</span>
+字符串只有空字符串为空
+
+<span class="comment">####★技巧★</span>
+函数内部打断点没有显示，隐藏的，只有在函数运行，点击事件的时候回出现
+
+<span class="comment">####★技巧★ </span>
+渐变--兼容问题
+先写兼容，最后写标准。
+
+<span class="comment">####★技巧★ </span>
+display:flex
+
+行内块元素的时候：display:inline-flex
+
+容器下边统一的为项目
+容器本身，项目
+方向、换行、水平、垂直，单轴交叉、多轴交叉
+
+
+<span class="comment">####★技巧★        编程风格</span>
+firstnum = secondnum = <span class="string">''</span>;
+等同于
+firstnum = undefined;
+secondnum = undefined;
+
+<span class="comment">####★技巧★   习惯用 +=  </span>
+
+<span class="comment">####★技巧★    查看它是否添加事件： </span>
+浏览器控制台---element添加事件---Event Listeners    
+
+<span class="comment">####★技巧★   调试出错   </span>
+调试：把所有变量  表达式的值  都输出来就能解决
+
+<span class="comment">####★技巧★    scope控制台调试</span>
+
+<span class="comment">####★技巧★   调试出错  </span>
+检查类名是否重复
+
+<span class="comment">####★技巧★ </span>
+flex布局中有个  调竖直高度元素的
+align-items: center;
+
+<span class="comment">####★技巧★ </span>
+实例化 就是指 new一个东西，new这个东西
+
+
+<span class="comment">####★技巧★ </span>
+   添加 移出类名
+tabs[k].classList.remove(<span class="string">'active'</span>);
+tabs[k].classList.add(<span class="string">'active'</span>);
+
+
+<span class="comment">####★技巧★ </span>
+obj.a == obj[<span class="string">'a'</span>]
+
+
+
+<span class="comment">####</span>
+    一、
+1.JavaScript是基于原型的语言
+2.10种数据类型（大致上）都是对象  （除undefined）
+3.每个对象都有自己的原型  __proto__ （只要是对象，就有原型）
+4.Object.prototype 是所有原型的终点
+        ///////////////////////////
+5.所有对象都能使用原型链上所有的属性和方法
+//////////////////////////////////////////////////////////////////////////////
+
+    二、
+this一般出现在函数内部
+哪个对象调用这个函数   this就指向谁    //谁调用它就指向谁
+
+this可以被强制替换
+
+
+三、new的时候发生了什么
+
+函数对象上有一个特殊的属性叫：prototype
+这是javascript专门为原型设计的一个属性
+
+//     var o = new A();    //此时的o是对象
+//    1.o = {}           创建一个空对象
+//    2.A.call(o)     以call的方式调用构造函数       把this替换成o
+//    o._proto_ = A.prototype
+//    3.给o加上原型   A.prototype  属性
+//    4.return o
+
+
+
+    var arr = new Array[1,2,3];
+//    var arr = {};
+//    Array.call(arr,1,2,3);
+//    arr.__proto__  = Array.prototype
+
+
+
+
+
+
+
+对象    构造函数
+<span class="keyword">function</span> <span class="function"><span class="title">A</span></span>(){
+    this.a = 12;
+    this.b = 13;
+}
+var o = new A();    //此时的o是对象
+    o.a    o.b     //因此可以用  0.a  o.b
+
+
+
+
+
+
+
+
+
+<span class="comment">####     20170608            /JQuery</span>
+
+$(<span class="string">'li'</span>)   //JQuery集合
+
+
+
+
+
+
+<span class="comment">####     20170609          cmd  命令    环境变量     SASS</span>
+
+//环境变量
+    1.把QQ(软件)的安装目录找到，复制地址，   D:\QQ\Bin   ，
+    2.放到环境变量中（属性--高级设置--环境变量--path--加分号），
+    3.在 cmd 中运行  qq
+
+
+dir
+    ls -al
+    clear
+    node -v
+    npm -v
+
+cmd--&gt;
+    <span class="built_in">cd</span>    切换目录
+    dir    查看目录下文件
+    npm 下载（已有）程序
+npm install -g bing-pic  把微软官网的图片换成背景图片      运行  bing-pic
+
+    npm install -g node-sass  安装node-sass的软件     node-sass -v
+    npm install -g cnpm  //中文版 npm
+    命令改为：
+    cnpm install -g node-sass
+
+任何一个文件中都有 两个文件夹  .    ..
+        .    当前文件夹
+        ..    上一层
+
+cmd中复制命令：右键--标记--回车   C:\Users\Administrator\AppData\Roaming\npm
+    把文件拖过去
+
+    node-sass -w index.scss index.css
+    node-sass -w index.scss index.css --output-style expanded
+
+
+
+. Sass简介
+
+Sass 是一种css预处理器,CSS 预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为 CSS 增加了一些编程的特性，将 CSS 作为目标生成文件，然后开发者就只要使用这种语言进行编码工作。
+
+
+/*
+
+变量默认只能在属性值中使用
+
+差值：
+选址器和属性部分用差值 <span class="comment">#{$s}</span>
+
+*/
+
+
+<span class="comment">###    占位符 %      生成高效率群组选择器</span>
+    %  继承的方法   --&gt; 群组选择器
+
+<span class="comment">###    扩展/继承(@extend)</span>
+
+%mt5 {
+    margin-top: 5px;
+}
+%pt5{
+   padding-top: 5px;
+}
+
+.btn {
+   @extend %mt5;
+   @extend %pt5;
+}
+
+<span class="comment">###  for 循环</span>
+@<span class="keyword">for</span> <span class="variable">$i</span> from 1 through <span class="variable">$num</span>{
+        <span class="comment">#{$box}:nth-child(#{$i}){</span>
+            animation: drop 1s cubic-bezier(0.38, 1.48, 0.22, 1.32) ( <span class="variable">$i</span> - 1 ) * 0.1s both;
+        }
+    }
+
+&lt;?php 
+<span class="keyword">for</span> (<span class="variable">$x</span>=0; <span class="variable">$x</span>&lt;=10; <span class="variable">$x</span>++) {
+  <span class="built_in">echo</span> <span class="string">"数字是：<span class="variable">$x</span> &lt;br&gt;"</span>;
+} 
+?&gt;
+
+
+&lt;!--&lt;?php <span class="keyword">for</span>(<span class="variable">$X</span>=0;X&lt;=<span class="variable">$v</span>[<span class="string">'num'</span>];<span class="variable">$X</span>++){--&gt;
+                    &lt;!--<span class="built_in">echo</span> <span class="string">"&lt;span class='fire'&gt;&lt;/span&gt;"</span>--&gt;
+                    &lt;!--} ?&gt;--&gt;
+
+
+<span class="comment">###    each 遍历</span>
+<span class="variable">$arr</span>: <span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'three'</span>;
+@each <span class="variable">$v</span> <span class="keyword">in</span> <span class="variable">$arr</span>{
+    .atem-<span class="comment">#{$v}{</span>
+        color:red;
+    }
+}
+
+/*html中遍历：
+foreach(<span class="variable">$data</span> as <span class="variable">$v</span>){
+
+}*/
+
+<span class="comment">####        PHP中      遍历：</span>
+                  键    值
+/*foreach(<span class="variable">$arr</span> as <span class="variable">$k</span> =&gt; <span class="variable">$v</span>){
+    dump(<span class="variable">$k</span>,<span class="variable">$v</span>);
+};
+
+foreach (<span class="variable">$nts</span> as <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) {
+    var_dump(<span class="variable">$key</span>, <span class="variable">$value</span>);
+    <span class="variable">$id</span> = <span class="variable">$value</span>[<span class="string">'id'</span>];
+    dump(<span class="variable">$id</span>);
+};
+
+<span class="comment">## ★  0613   ★★★★★★★★★★★  SASS  ★★★★★★★★★</span>
+
+    <span class="variable">$a</span>:13;
+    <span class="variable">$a</span>:12 !default;  //默认
+    @debug <span class="variable">$a</span>;
+    <span class="variable">$aa</span>: 10rem;
+    <span class="variable">$b</span>: 10px;
+    <span class="variable">$c</span>: null;
+    @debug <span class="variable">$aa</span>;
+    @debug <span class="variable">$b</span>;
+    @debug <span class="variable">$c</span>;
+    <span class="variable">$d</span>: <span class="variable">$a</span> * 2;
+    <span class="variable">$border</span>: <span class="string">'1px solid black'</span>;
+    @debug <span class="variable">$d</span>;
+    @<span class="keyword">if</span> (<span class="variable">$a</span> &gt; 7){
+
+    }
+
+<span class="comment">## ★     ★★★★★★★★★★★  PHP  ★★★★★★★★★</span>
+
+
+
+公告栏
+当我们打开浏览器
+输入一个地址
+随后发生了什么
+
+<span class="comment">## 【浏览器(chrome)】的主要功能：</span>
+    1.通过网络发送请求，
+    3.接受网络上发给它的回应
+    4.根据回应的内容进行对应的操作(**一般为渲染(画图)**)
+----------------------------- http 协议 ----------------------------------
+    是服务器和浏览器之间通信遵循的一个规则
+<span class="comment">## 【服务器Apache】的主要功能</span>
+    2.回应通过网络发送过来的请求。
+    如果请求的资源是一个php文件
+apache  不会把php文件的内容发回去
+apache  会把该文件当成一段程序去运行
+程序运行一般都有输出
+apache 拿到这个输出
+通过网络吧这个输出发回浏览器
+
+WAMP server
+W【windows】
+A【Apache】
+M【Mysql】
+P【Php】    java node.js perl .net
+
+
+<span class="comment">## 【浏览器】会在什么情况下发送请求</span>
+1.输入地址回车（主动）
+2.点击a链接（有可能，主动）
+3.提交表单有可能会发起请求（主动）  form
+    input
+4.绘制html的过程中会自动发起请求（自动）
+5.解析css的过程中可能会自动发起请求（自动）   `background-image:(<span class="string">'../img/1.png'</span>);``
+6.解释js的过程中有可能会是自动发起请求（自动）【ajax】
+
+<span class="comment">## 【浏览器】发出去的请求是什么？</span>
+是一堆字符串
+    GET /a.html HTTP/1.1        【要获取的文件  http协议】
+    Host: 192.168.4.147            【地址，从哪获取的】
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8  【获取的文件的类型】
+
+<span class="comment">## 【服务器】发回来的是什么</span>
+是一堆字符串
+             200  OK  404 报错 500 报错
+    HTTP/1.1 304 Not Modified            【头】
+    Server: 
+
+Apache/2.2.29 (Unix)  ...   【空行】   服务器类型
+    content-Length:54  //字节    1025字节==1M  1024M==1G     【空行】 【内容的长度】
+    content-Type:text/html(plain)                【主体】        【请求内容的类型，】
+content-Type:text/html   返回的是html内容
+content-Type:text/plain  返回全部（包括标签）如下
+
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;this is header&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+<span class="comment">## ★★★★★  PHP 输出  ★★★★★★★★★</span>
+
+//<span class="built_in">echo</span> <span class="string">'&lt;pre&gt;'</span>;
+//    print_r(<span class="variable">$_SERVER</span>);
+//<span class="built_in">echo</span> <span class="string">'&lt;/pre&gt;'</span>;
+
+&lt;?php
+
+//    变量
+//    数据类型
+//    表达式和语句
+//    运算符
+//    控制流程
+//    <span class="built_in">echo</span> 5;
+//    <span class="built_in">echo</span> rand( 1,10 );
+    <span class="keyword">if</span>(rand( 1,10 )&gt;5) {
+
+
+ ./error.js在WEB中是 localhost/index.php/error.js
+ /views/error.js
+
+
+<span class="comment">###        header('Content-Type:text/plain');   `修改头部信息`</span>
+header 是选中头部信息
+        header(<span class="string">'X-sever:ABC'</span>);
+        include <span class="string">'a.html'</span>;   //输出  a.html 这个文件
+    }<span class="keyword">else</span>{
+        header(<span class="string">'Content-Type:text/html'</span>);  
+        修改头部信息
+        header 是选中头部信息
+
+        header(<span class="string">'X-sever:DEF'</span>);
+        include <span class="string">'1.txt'</span>;
+    }
+
+dump()
+
+
+
+<span class="comment">###  程序头部：调试工具：   +vendor文件夹   ★★★★★★★ ★★★★★★★</span>
+&lt;?php
+
+include <span class="string">"vendor/autoload.php"</span>;
+<span class="variable">$whoops</span> = new \Whoops\Run;
+<span class="variable">$options</span> = new \Whoops\Handler\PrettyPageHandler();
+<span class="variable">$whoops</span>-&gt;pushHandler(<span class="variable">$options</span>);
+<span class="variable">$whoops</span>-&gt;register();
+ini_set(<span class="string">'display_errors'</span>, <span class="string">'On'</span>);
+
+
+
+<span class="comment">## ★★★★★★★★★★★★★★   PHP  0614    ★★★★★★★★★★★★★★</span>
+<span class="comment">####     PHP    WEB开发中 ./  ../</span>
+    页面是从服务器回来的：
+
+.   代表  localhost/index.php
+/   代表  localhost
+
+
+<span class="comment">###     ./   退回一级</span>
+请求： http://localhost/index.php/air/qwe/ewqqwe/ewq
+返回： http://localhost/index.php/air/qwe/ewqqwe/error.js
+
+<span class="comment">###     ../  退回2级</span>
+请求： http://localhost/index.php/air/qwe/ewqqwe/ewq
+返回： http://localhost/index.php/air/qwe/error.js
+
+一般不要用  ./  ../ 用直接的  `/views/error.js` 
+
+./error.js 在WEB中表示应该是 `localhost/index.php/error.js`
+
+
+
+<span class="comment">### &gt; incliude 引入的html页面中如果包含php标记</span>
+    会先运行标记中的代码，运行完之后再输出整个内容
+<span class="comment">### &gt; include 也能引入php文件，如果引入的是php文件</span>
+    运行这个文件
+
+
+<span class="comment">#######################       数据类型          ############################</span>
+
+/*
+<span class="variable">$int</span> = 12;
+dump(<span class="variable">$int</span>);
+<span class="variable">$float</span> = 12.5;
+dump(<span class="variable">$float</span>);
+<span class="variable">$str1</span> = <span class="string">'string{$float}'</span>;
+<span class="variable">$str2</span> = <span class="string">"string{<span class="variable">$float</span>}"</span>; //相当于 JS中的模板字符串   `阿斯顿还{aasd}asd`
+dump(<span class="variable">$str1</span>);
+dump(<span class="variable">$str2</span>);
+
+<span class="variable">$name</span> = <span class="string">"\\name"</span>; //转义字符串  \ 为了使\name正常输出来
+dump(<span class="variable">$name</span>);
+
+<span class="variable">$arr</span> = array(
+    <span class="string">'k1'</span> =&gt; <span class="string">'v1'</span>,
+    <span class="string">'k2'</span> =&gt; <span class="string">'v1'</span>,
+    <span class="string">'k3'</span> =&gt; <span class="string">'v1'</span>,
+    <span class="string">'k4'</span> =&gt; array(<span class="string">'a'</span>,<span class="string">'b'</span>,1,2.3)
+);
+dump(<span class="variable">$arr</span>);*/
+
+//<span class="built_in">unset</span>(<span class="variable">$arr</span>[<span class="string">'k2'</span>]);
+//dump(<span class="variable">$arr</span>);
+
+
+
+
+
+class A{
+    public <span class="variable">$a</span>;
+
+    public <span class="keyword">function</span> getA()
+    {
+        <span class="built_in">return</span> <span class="variable">$this</span>-&gt;a = 12;
+    }
+}
+<span class="variable">$o</span> = new A();
+dump(<span class="variable">$o</span>);*/
+
+
+<span class="comment">## ★★★★★★★★★★★★★★   变量   PHP 基础  ★★★★★★★★★★★★★★</span>
+
+// 字符串连接
+<span class="variable">$num</span> = 12.8;
+<span class="variable">$string</span> = <span class="string">"this is world"</span>.<span class="variable">$num</span>;
+
+// 双引号中使用变量
+<span class="variable">$world</span> = <span class="string">"world"</span>;
+<span class="variable">$hello</span> = <span class="string">"hello {<span class="variable">$world</span>}"</span>;
+
+// 转义特殊字符
+<span class="variable">$class_name</span> = <span class="string">"\\name"</span>;
+<span class="built_in">echo</span> <span class="variable">$class_name</span>;
+
+// 遍历
+foreach (<span class="variable">$array</span> as <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) {
+  var_dump(<span class="variable">$key</span>, <span class="variable">$value</span>);
+}
+
+// 对象
+class foo
+{
+    <span class="keyword">function</span> do_foo()
+    {
+        <span class="built_in">echo</span> <span class="string">"Doing foo."</span>;
+    }
+}
+
+gettype()函数可以得到变量的类型
+is_[<span class="built_in">type</span>]()函数可以用来判断某个变量是否某个类型
+var_dump()函数会输出变量的类型和值
+
+静态变量
+static <span class="variable">$sum</span> = 0;
+
+
+
+<span class="variable">$_SERVER</span>;
+    以结构化的形式存储用户的请求信息和一些与服务器相关的信息
+dump(<span class="variable">$_SERVER</span>);
+
+循环 date里有几条，就循环几次
+
+组件   面板
+
+<span class="comment">##        login</span>
+&lt;!--导航条   修改类--&gt;
+&lt;!--name是提交表单时查询字符串的 键--&gt;
+
+name = account   <span class="built_in">type</span> = text
+name = password  <span class="built_in">type</span> = password
+
+&lt;!--&lt;from action=<span class="string">"https://www.baidu.com/s"</span> method=<span class="string">"post"</span> &gt;--&gt;
+
+<span class="comment">##    ★★★★★★★★★★★      作业   ★★★★★★★★★★★</span>
+
+login （ 导航条 表单 面板 自己的CSS）--&gt;  
+/ （首页用：面板） --&gt;  
+list  (用列表组)  --&gt;  
+news  (用面板)  --&gt;  
+air (有图片的页面  用缩略图)  --&gt;  
+mac(不用做)  --&gt;   
+404页面  
+
+
+<span class="comment">##    ★★★★★★★★★★  0615    news中两种方法：    ★★★★★★</span>
+
+不用输入：
+&lt;ul&gt;
+    &lt;?php foreach(<span class="variable">$_REQUEST</span> as <span class="variable">$v</span>):  ?&gt;
+    &lt;li&gt;
+        &lt;?php <span class="built_in">echo</span> <span class="variable">$v</span> ?&gt;
+    &lt;/li&gt;
+    &lt;?php endforeach;?&gt;
+&lt;/ul&gt;
+
+
+需要从列表页进入先点：
+&lt;li&gt;&lt;?php <span class="built_in">echo</span> <span class="variable">$_REQUEST</span>[<span class="string">'title'</span>]; ?&gt;&lt;/li&gt;
+&lt;li&gt;&lt;?php <span class="built_in">echo</span> <span class="variable">$_REQUEST</span>[<span class="string">'content'</span>]; ?&gt;&lt;/li&gt;
+
+
+    &lt;ul&gt;
+        &lt;?php foreach(<span class="variable">$_REQUEST</span> as <span class="variable">$v</span>):  ?&gt;
+        &lt;li&gt;
+            &lt;?php <span class="built_in">echo</span> <span class="variable">$v</span> ?&gt;
+        &lt;/li&gt;
+        &lt;?php endforeach;?&gt;
+    &lt;/ul&gt;
+
+//<span class="variable">$tip</span> = getMessage();
+//数据库
+
+
+
+<span class="comment">###  表单中method=post  就是把值隐藏掉  =get 不会隐藏</span>
+    比如说密码的输入显示和隐藏
+&lt;form action=<span class="string">"/index.php/img"</span> method=<span class="string">"post"</span>&gt; 
+    &lt;input <span class="built_in">type</span>=<span class="string">"submit"</span>  value=<span class="string">"搜索"</span>&gt;
+&lt;/form&gt;
+一般都用隐藏  
+
+<span class="keyword">if</span>(isset){   //isset是看一个数组中有没有一个值，如果有返回<span class="literal">true</span>,否则返回<span class="literal">false</span>
+}
+
+<span class="comment">#####     截取</span>
+
+<span class="variable">$path</span> = explode(<span class="string">'?'</span>,<span class="variable">$_SERVER</span>[<span class="string">'REQUEST_URI'</span>])[0];
+<span class="variable">$action</span> = explode(<span class="string">'/'</span>,<span class="variable">$path</span>)[2];
+
+<span class="comment">######   函数</span>
+
+<span class="keyword">function</span> <span class="function"><span class="title">index</span></span>(){}        用法和JS的函数用法一样，只是可以是可变函数
+    <span class="variable">$fn</span> = <span class="string">'index'</span>;   <span class="variable">$fn</span>()  ==&gt; 相当于 index();
+
+isset(变量)              检测这个变量是否存在
+function_exists(函数)    检测这个函数是否存在
+
+
+<span class="comment">####    news_lest 源代码</span>
+/*<span class="variable">$data</span> = array(
+        0 =&gt; array(
+            <span class="string">'title'</span> =&gt; <span class="string">'111'</span>,
+            <span class="string">'author'</span> =&gt; <span class="string">'a1'</span>,
+            <span class="string">'content'</span> =&gt; <span class="string">'没有什么问题是火力覆盖解决不了的，如果有，那就问啊！'</span>,
+        ),
+        1 =&gt; array(
+            <span class="string">'title'</span> =&gt; <span class="string">'222'</span>,
+            <span class="string">'content'</span> =&gt; <span class="string">'世界十大名枪之首：AK-47的魅力所在'</span>
+        ),
+        2 =&gt; array(
+            <span class="string">'title'</span> =&gt; <span class="string">'333'</span>,
+            <span class="string">'content'</span> =&gt; <span class="string">'解放军这款战机到底有多厉害？美国将其列为三'</span>
+        ),
+        3 =&gt; array(
+            <span class="string">'title'</span> =&gt; <span class="string">'444'</span>,
+            <span class="string">'content'</span> =&gt; <span class="string">'看武警汽车兵“炫技”，感受军营的速度与激情'</span>
+        )
+    );*/
+
+<span class="comment">##    ★★★★★★★★★★   数据库 test</span>
+
+phpMyadmin --&gt; <span class="built_in">test</span> --&gt; news   5  --&gt;  id  
+`类型选择` : INT / VARCHAR / text/mediumtext 字段长度不够  --》  保存
+
+名字         类型                默认                        排序                        规则
+content        text                            utf8_general_ci
+ctime        TIMESTAMP    CURRENT_TIMESTAMP
+
+
+time:date
+
+通用
+utf8_general_ci
+
+插入 --&gt; 不用管id
+
+从PDO中复制代码到 PHP代码
+
+修改代码   dbname   
+    <span class="string">'dbname'</span> =&gt; <span class="string">'test'</span>,
+    <span class="string">'username'</span> =&gt; <span class="string">'root'</span>,
+    <span class="string">'password'</span> =&gt; <span class="string">''</span>,
+
+
+ <span class="variable">$stmt</span> = <span class="variable">$pdo</span>-&gt;query(<span class="string">'select * from news'</span>);  
+    相当于JS 的 <span class="variable">$pdo</span>.query()，
+
+SELECT * FROM `news` WHERE 1
+
+SELECT title,content FROM `news`
+
+SELECT * FROM `news` WHERE  id = 1  
+SELECT * FROM `news` WHERE  author = <span class="string">'wo'</span>
+
+<span class="comment">#####    把数据表中的title下的内容全改为title。</span>
+UPDATE `advanture` SET `title`=<span class="string">'真心话'</span>
+
+&lt;!-- 引入JQuery2.2.4--&gt;
+
+        &lt;a href=<span class="string">"/0614/index.php/news?title= &lt;?php echo <span class="variable">$v</span>['title'] ?&gt; &amp; author= &lt;?php echo <span class="variable">$v</span>['author'] ?&gt; &amp; time= &lt;?php echo <span class="variable">$v</span>['time'] ?&gt; &amp; content= &lt;?php echo <span class="variable">$v</span>['content'] ?&gt;"</span> class=<span class="string">"list-group-item list-group-item-success"</span>&gt;
+
+
+&lt;!--&lt;?php <span class="built_in">echo</span> <span class="variable">$data</span>[<span class="string">'id'</span>] ?&gt;--&gt;
+
+&lt;!--    &lt;ul &gt;
+        &lt;?php foreach(<span class="variable">$data</span> as <span class="variable">$v</span>):  ?&gt;
+        &lt;li&gt;
+            &lt;a href=<span class="string">"/index.php/news?title= &lt;?php echo <span class="variable">$v</span>['title'] ?&gt; &amp;content= &lt;?php echo <span class="variable">$v</span>['content'] ?&gt;"</span>&gt;
+                &lt;?php <span class="built_in">echo</span> <span class="variable">$v</span>[<span class="string">'title'</span>]; ?&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;?php endforeach;?&gt;
+    &lt;/ul&gt;--&gt;
+
+
+<span class="comment">##    ★★★★★★★★★★   作业    ★★★★★★★★★★</span>
+
+1.熟练掌握变换形式之后的代码
+2.学会查询数据库
+3.完成新闻列表  新闻详情页面
+4.完成登录功能
+5.让首页显示数据库中的最新添加的一条公告（）
+
+<span class="comment">##    ★★★★★★★★★   数组的长度</span>
+<span class="built_in">echo</span> count(<span class="variable">$arr</span>);
+
+
+<span class="comment">##    ★★★★★★★★★   编码历史</span>
+ascII 编码
+gbk2312
+unicode码
+utf-8   优化过的，基础是unicode码的编码
+位 byte
+字节 bytes   = 8个位
+00010001
+h
+l
+
+
+
+<span class="comment">####    改page.php下边的</span>
+
+include <span class="string">'core/pdo.php'</span>;
+        global <span class="variable">$pdo</span>;
+
+
+<span class="comment">#####    method_exists — 检查类的方法是否存在</span>
+bool method_exists ( mixed <span class="variable">$object</span> , string <span class="variable">$method_name</span> )
+检查类的方法是否存在于指定的 object中。
+
+//方法二
+        <span class="keyword">if</span>(isset(<span class="variable">$_SERVER</span>[<span class="string">'PATH_INFO'</span>])){          //是否有fn
+            <span class="variable">$fn</span> = substr(<span class="variable">$_SERVER</span>[<span class="string">'PATH_INFO'</span>],1);
+        }<span class="keyword">else</span>{
+            <span class="variable">$fn</span> = <span class="string">'index'</span>;
+        }
+
+        <span class="keyword">if</span>(method_exists(<span class="string">'pages'</span>,<span class="variable">$fn</span>)){  //判断 <span class="variable">$fn</span> 这个函数是否存在
+            <span class="variable">$pages</span>-&gt;<span class="variable">$fn</span>();
+        }<span class="keyword">else</span>{
+            include <span class="string">'../405.html'</span>;
+        }
+
+file_exists  判断有没这个文件
+class_exists 检查类是否已定义
+
+
+JSON.stringify(arr);   //JS中转换为字符串 便于 php转换
+json_decode(); //php中解码
+json_encode(); //php中编码
+JSON.parse(data);   //JS中转换为数组 便于 php转换
+
+<span class="comment">#####      pring_r(111);</span>
+PHP中需使用   pring_r(111);
+
+<span class="comment">####  admin</span>
+数据库
+`<span class="variable">$stmt</span> = <span class="variable">$db</span>-&gt;pdo-&gt;query(<span class="string">'select * from risk order by id desc limit 3 offset '</span>.(<span class="variable">$page</span> - 1) * 3);//数据库     偏移，跳过9个`
+
+
+<span class="comment">#####    x的东西</span>
+    <span class="keyword">function</span> <span class="function"><span class="title">x</span></span>(){
+        <span class="variable">$page</span> = <span class="variable">$_REQUEST</span>[<span class="string">'page'</span>];
+        include <span class="string">'core/Db.php'</span>;
+        <span class="variable">$db</span> = new Db();
+        <span class="variable">$stmt</span> = <span class="variable">$db</span>-&gt;pdo-&gt;query(<span class="string">'select * from advanture order by id desc limit 3 offset 3 '</span>);//数据库     偏移，跳过9个
+//        <span class="variable">$stmt</span> = <span class="variable">$db</span>-&gt;pdo-&gt;query(<span class="string">'select * from advanture order by id desc limit 3 offset 3'</span>.(<span class="variable">$page</span> - 1) * 3);//数据库     偏移，跳过9个
+//        <span class="variable">$stmt</span>-&gt;bindValue(1,(<span class="variable">$page</span> - 1) * 3);
+//        <span class="variable">$stmt</span>-&gt;execute();
+        <span class="variable">$data1</span> = <span class="variable">$stmt</span>-&gt;fetchAll();
+        <span class="variable">$data</span> = json_encode(<span class="variable">$data1</span>);
+    }
+
+
+
+
+<span class="comment">#####    SQL  </span>
+
+<span class="comment">##  在index.php 中的</span>
+//以下为今天练习的
+try {
+    <span class="variable">$pdo</span> = new PDO(<span class="string">'mysql:host=localhost;dbname=test;port=3306;charset=utf8'</span>,<span class="string">'root'</span>,<span class="string">''</span>);
+//          <span class="variable">$pdo</span> = new PDO(<span class="string">'mysql:host = localhost;dbname = test;port=3306,charset = utf8'</span>, <span class="string">'root'</span>, <span class="string">''</span>);
+} catch (PDOException <span class="variable">$e</span>) {
+    dump(<span class="variable">$e</span>-&gt;getMessage());
+}
+
+//增删改查
+
+//查
+<span class="variable">$stmt</span> = <span class="variable">$pdo</span>-&gt;query(<span class="string">'select * from trues'</span>);
+<span class="variable">$data</span> = <span class="variable">$stmt</span>-&gt;fetchAll();
+print_r(<span class="variable">$data</span>);
+
+
+//增     //问号用prepare
+<span class="variable">$stmt</span> = <span class="variable">$pdo</span>-&gt;prepare(<span class="string">'insert into trues (id,name,age) values(?,?,?)'</span>);   //   (id,name,age) 必须是 trues 表里有的
+<span class="variable">$stmt</span>-&gt;bindValue(1, 18);
+<span class="variable">$stmt</span>-&gt;bindValue(2, <span class="string">'asddsa'</span>);
+<span class="variable">$stmt</span>-&gt;bindValue(3, <span class="string">'hgfdsdgh'</span>);
+<span class="variable">$stmt</span>-&gt;execute();
+<span class="variable">$id</span> = <span class="variable">$pdo</span>-&gt;lastInsertId();
+print_r(<span class="variable">$id</span>);
+
+//删   一条
+<span class="variable">$stmt</span> = <span class="variable">$pdo</span>-&gt;prepare(<span class="string">'delete from trues where id = ?'</span>);
+<span class="variable">$stmt</span>-&gt;bindValue(1, 1);
+<span class="variable">$stmt</span>-&gt;execute();
+////删多条
+<span class="variable">$stmt</span> = <span class="variable">$pdo</span>-&gt;query(<span class="string">'delete from trues where id in (9,8,7,6,5) '</span>);
+<span class="variable">$stmt</span>-&gt;execute();   //执行准备好的Query
+
+
+//改
+<span class="variable">$stmt</span> = <span class="variable">$pdo</span>-&gt;prepare(<span class="string">'update trues set name = ?, age = ? where id = ?'</span>);
+<span class="variable">$stmt</span>-&gt;bindValue(1, <span class="string">'asddsaasd'</span>); //问号的值
+<span class="variable">$stmt</span>-&gt;bindValue(2, <span class="string">'asddsa'</span>);
+<span class="variable">$stmt</span>-&gt;bindValue(3, <span class="string">'4'</span>);
+<span class="variable">$stmt</span>-&gt;execute();
+
+/////////////////////////////////////////
+<span class="variable">$id</span> = <span class="variable">$db</span>-&gt;pdo-&gt;lastInsertId();
+
+
+
+<span class="comment">## 在 database.sql 下边的</span>
+
+-- 这个文件我们不直接使用
+-- 在该文件中定义整个应用到的数据库表
+--删除 risk 表
+-- //注意最后一个是分号‘;’
+
+DROP TABLE IF EXISTS trues;
+CREATE TABLE trues(
+    id INT(12) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    age VARCHAR(255)
+) DEFAULT CHARSET = utf8;
+INSERT INTO trues (name,age) VALUES
+(<span class="string">'名字1'</span>,<span class="string">'年龄1'</span>),
+(<span class="string">'名字2'</span>,<span class="string">'年龄2'</span>),
+(<span class="string">'名字3'</span>,<span class="string">'年龄3'</span>),
+(<span class="string">'名字4'</span>,<span class="string">'年龄4'</span>),
+(<span class="string">'名字1'</span>,<span class="string">'年龄1'</span>),
+(<span class="string">'名字2'</span>,<span class="string">'年龄2'</span>),
+(<span class="string">'名字3'</span>,<span class="string">'年龄3'</span>),
+(<span class="string">'名字4'</span>,<span class="string">'年龄4'</span>),
+(<span class="string">'名字1'</span>,<span class="string">'年龄1'</span>),
+(<span class="string">'名字2'</span>,<span class="string">'年龄2'</span>),
+(<span class="string">'名字3'</span>,<span class="string">'年龄3'</span>),
+(<span class="string">'名字4'</span>,<span class="string">'年龄4'</span>);
+
+
+<span class="comment">####    ajax   </span>
+ajaxStart
+ajaxSuccess
+$(document).ajaxComplete(<span class="function"><span class="title">function</span></span>(){
+    $(<span class="string">'.tip'</span>).css({background:<span class="string">'#00C853'</span>}).stop().animate({width:<span class="string">'100%'</span>}).queue(<span class="function"><span class="title">function</span></span>(){
+        $(<span class="string">'.tip'</span>).css({width:<span class="string">'5%'</span>,height:<span class="string">'0'</span>}).dequeue();
+    })
+});
+
+<span class="comment">###        php中让进程停顿 1秒</span>
+sleep(1)
+
+<span class="comment">####         ajax 传参</span>
+url: <span class="string">'/ktv/index.php/store_admin/delete_store'</span>,
+data: {id: id},
+url: <span class="string">'/ktv/index.php/store_admin/delete_store'</span> + id,
+
+
+
+&lt;label&gt;
+    &lt;?php <span class="keyword">if</span>(isset (<span class="variable">$_REQUEST</span>[<span class="string">'id'</span>]) &amp;&amp; <span class="variable">$v</span>[<span class="string">'id'</span>] == <span class="variable">$_REQUEST</span>[<span class="string">'id'</span>]):?&gt;
+    &lt;input <span class="built_in">type</span>=<span class="string">"radio"</span> name=<span class="string">"cid"</span> value=<span class="string">"&lt;?php echo <span class="variable">$v</span>['id']?&gt;"</span> placeholder=<span class="string">""</span> checked=<span class="string">"checked"</span>&gt;
+    &lt;?php <span class="keyword">else</span>:?&gt;
+    &lt;input <span class="built_in">type</span>=<span class="string">"radio"</span> name=<span class="string">"cid"</span> value=<span class="string">"&lt;?php echo <span class="variable">$v</span>['id']?&gt;"</span> placeholder=<span class="string">""</span>&gt;
+    &lt;?php endif;?&gt;
+    &lt;?php <span class="built_in">echo</span> <span class="variable">$v</span>[<span class="string">'name'</span>]?&gt;
+&lt;/label&gt;
+
+
+<span class="comment">####   ajax  浏览器中  newwork  的格式</span>
+在 ajax 请求中加入 dataType: <span class="string">'json'</span>, 转成json格式
+ajax请求的<span class="built_in">type</span>   xhr
+
+
+<span class="comment">#####    编程思想：数据驱动页面   </span>
+<span class="comment">#####    编程方法：一言不合就重绘        </span>
+<span class="comment">#####    让状态管理变得不再繁琐 </span>
+
+百度云操作 
+
+<span class="comment">###            </span>
+买机器   点住 选 休眠
+
+应用引擎BAE --&gt;  上传.jpg --&gt; 下一步
+
+上传之前 先跑这行代码
+git config http.postBuffer 524288000
+
+<span class="comment">##  `git上传要写限制500M那个，要不页面不更新`</span>
+
+500M
+
+git 忽略文件：   .创一个.gitignore文件    忽略某些    
+在里面写`.idea/`  和文件的名字
+
+百度云上传出错，在更多操作中查看日志
+重点对比路径上的大小写问题    core/Core
+
+git传代码
+
+--新版   --快捷发布
+
+
+404 not found--&gt; 
+
+买数据库：
+<span class="built_in">test</span> --&gt; 导出 sql语句，在这边复制
+
+改sql的名字  链接地址   
+db中内容全要换
+
+全文件搜索替换
+
+git push
+
+重新上传  
+
+<span class="comment">####  百度云上传的  bug</span>
+出不来页面：
+/view/
+改成APP/view/
+
+进了php的 <span class="keyword">function</span> <span class="function"><span class="title">index</span></span>(){ 中，print_r(123); 看一下，能不能出来123.}
+如果还是没有，看看 include <span class="string">'APP/view/gameadmin.html'</span>; 这几个字对了没，核对文件夹里，
+是不是 gameadmin  写成 Gameadmin 了 。一般只有这个错误
+
+
+如果出现404页面 是路径问题   大小写问题
+
+<span class="comment">###   解决 bug</span>
+//调试 ：  到处 用 <span class="built_in">echo</span> 查看，在 index.php 中，在 core 中，一步一步<span class="built_in">echo</span> ,看看到哪一步没有的
+//<span class="built_in">echo</span> 123;
+
+<span class="comment">###   框架升级</span>
+
+<span class="comment"># 1. 命名空间 namespace app;</span>
+//namespace lib;//写所在文件夹的名字
+//namespace core\c;//写所在文件夹的名字  在 core 文件夹下的c文件夹下的
+`一旦加命名空间，用的时候就要注意，后边的后腰加那个命名空间了`
+
+<span class="comment">#2. core 改造</span>
+
+ 加 <span class="built_in">autoload</span> 方法
+
+<span class="comment">#3. index 定常量</span>
+define
+
+spl_autoload_register(<span class="string">'core::autoload'</span>); //new 的core 下边的<span class="built_in">autoload</span> 文件
+
+<span class="comment">#4.  new M方法</span>
+   new db
+
+<span class="comment">#5.  db</span>
+
+
+
+Db中操作
+
+M(<span class="string">'song'</span>)-&gt;fetchAll();
+
+M(<span class="string">'song'</span>)-&gt;fetch();
+
+加 <span class="built_in">where</span> 
+
+
+<span class="variable">$arr</span> = Array(
+  a=&gt;1;
+  b=&gt;2;
+)
+
+ `被替换为`：
+
+extract(<span class="variable">$arr</span>);
+<span class="variable">$a</span> = 1；
+<span class="variable">$b</span> = 2;
+
+core  修改
+
+
+<span class="comment">###  制作博客：</span>
+
+数据库 创建内容和用户--》sql
+
+header 用 bootstrap  写样式
+
+在app 下新建home。html
+
+新建点赞数据库
+
+视图 检索点赞数 点踩数
+
+判断时候有某各类 点赞
+
+ajax发出请求
+
+M方法给默认值
+
+pd方法默认值
+
+
+
+// 每一根线  配图  a 链接 
+
+做页面，做后台
+
+新框架
+
+
+<span class="comment">## 添加图片 </span>
+
+html中form 要写一句 exp....
+</code></pre>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:github.com/liujiang135/blog.git">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/08/07/008_Fullpage 笔记/">008- Fullpage</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/007_vue/">007- VUE</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/006_nodeJs/">006- nodeJS</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/005_react/">005-react</a>
+      </li>
+    
+      <li>
+        <a href="/2017/08/07/004_PHP笔记/">004_PHP</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 Jiang
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>
